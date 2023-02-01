@@ -1,0 +1,3030 @@
+﻿<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=unicode">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List href="index_files/filelist.xml">
+<link rel=Edit-Time-Data href="index_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>COMP 411/511: Principles of Programming Languages</title>
+<link rel=themeData href="index_files/themedata.thmx">
+<link rel=colorSchemeMapping href="index_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+schedule_tbl {border-collapse: collapse; table-layout: fixed; width: 100%; border: 1px solid black; }
+
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Arial",sans-serif;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-hansi-font-family:"Calibri Light";
+	mso-bidi-font-family:"Calibri Light";
+	color:#2E74B5;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-hansi-font-family:"Calibri Light";
+	mso-bidi-font-family:"Calibri Light";
+	color:#2E74B5;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-hansi-font-family:"Calibri Light";
+	mso-bidi-font-family:"Calibri Light";
+	color:#1F4D78;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:111563075;
+	mso-list-template-ids:2058675252;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:124278490;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2108708514 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:1.75in;
+	text-indent:-9.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:3.25in;
+	text-indent:-9.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:4.75in;
+	text-indent:-9.0pt;}
+@list l2
+	{mso-list-id:722868858;
+	mso-list-template-ids:-84671904;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3
+	{mso-list-id:840970551;
+	mso-list-template-ids:-2132529590;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1097212352;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-874612900 439890152 67698703 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-start-at:2;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l4:level2
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:1.75in;
+	text-indent:-9.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:3.25in;
+	text-indent:-9.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:4.75in;
+	text-indent:-9.0pt;}
+@list l5
+	{mso-list-id:1171723290;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1222885374 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l5:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l5:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:1743210442;
+	mso-list-template-ids:-1061782070;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l6:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-right:7.5pt'><span style='mso-no-proof:yes'><img
+width=122 height=123 id="_x0000_i1028"
+src="https://www.cs.rice.edu/~javaplt/411/22-spring/logo.gif"
+alt="Rice University"></span><sup><span style='font-size:72.0pt'>&nbsp;COMP
+411/511</span></sup> </p>
+
+<div id="course_info">
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>Principles of
+Programming Languages<o:p></o:p></span></h1>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>Spring 2023 <o:p></o:p></span></h1>
+
+<p style='margin-top:12.0pt'><strong><span style='font-family:"Arial",sans-serif'>Professor
+Robert &quot;Corky&quot; Cartwright</span></strong><b>, Duncan Hall 3104</b></p>
+
+<p><em><span style='font-size:14.0pt;font-family:"Arial",sans-serif'><a
+href="http://www.cs.rice.edu/"><span style='font-family:"Times New Roman",serif;
+font-style:normal;text-decoration:none;text-underline:none'>Department of
+Computer Science,</span></a></span></em><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> <em><a href="http://www.rice.edu/"><span
+style='font-family:"Arial",sans-serif;font-style:normal;text-decoration:none;
+text-underline:none'>Rice University</span></a></em><u>,</u> Houston, Texas,
+USA </span></p>
+
+<p><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Room
+1075, Duncan Hall</span></b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>,
+Monday, Wednesday, Friday, 11:00am–11:50am </span></p>
+
+<p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>For more
+information on the course staff including office hours, see <a
+href="https://www.cs.rice.edu/~javaplt/411/23-spring/info.html"><span
+style='font-family:"Arial",sans-serif'>course information</span></a>. </span></p>
+
+</div>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=6 width="100%" align=center>
+
+</span></div>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>Course Resources <o:p></o:p></span></h2>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-fareast-font-family:"Times New Roman"'>This GitHub classroom
+     site at </span><span style='font-family:"Arial",sans-serif;mso-fareast-font-family:
+     "Times New Roman"'>https://classroom.github.com/classrooms/36009305-rice-comp411-511-spring-2023</span><span
+     style='mso-fareast-font-family:"Times New Roman"'>.<span
+     style='mso-spacerun:yes'>  </span>The main course web page is </span><span
+     style='font-family:"Arial",sans-serif;mso-fareast-font-family:"Times New Roman"'><a
+     href="https://ricecomp411.github.io/Master-2023/">https://ricecomp411.github.io/Master-2023/</a></span><span
+     style='mso-fareast-font-family:"Times New Roman"'>.<span
+     style='mso-spacerun:yes'>  </span>It is available as a PDF file at </span><span
+     style='font-family:"Arial",sans-serif'><a
+     href="https://ricecomp411.github.io/Master-2023/MainPage.pdf">https://ricecomp411.github.io/Master-2023/MainPage.pdf</a></span><span
+     style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-fareast-font-family:"Times New Roman"'>This course uses Piazza
+     for class discussion and questions about class material. The site is
+     located at the following URL: </span><span style='font-family:"Arial",sans-serif;
+     mso-fareast-font-family:"Times New Roman"'><a
+     href="https://piazza.com/rice/spring2023/comp411/home">https://piazza.com/rice/spring2023/comp411/home</a></span><span
+     style='mso-fareast-font-family:"Times New Roman"'>. The Comp 411/511
+     Piazza discussion board will be monitored by the course staff and will
+     also appear on each student's Piazza home page. The Piazza website is
+     designed to quickly provide you with course help from classmates, the TAs,
+     and myself. Rather than emailing questions to the teaching staff, I
+     encourage you to post your questions on Piazza. If you have any problems
+     or feedback for the Piazza developers, email team@piazza.com. <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-list:l0 level1 lfo3;tab-stops:list .5in'><span
+     style='mso-fareast-font-family:"Times New Roman"'><a
+     href="https://jam-lang.github.io/"><span style='font-family:"Arial",sans-serif'>Browser-based
+     reference Jam interpreter</span></a> developed by Nick <span class=SpellE>Vrvilo</span>,
+     a recent doctoral graduate who now works for <span class=SpellE>TwoSigma</span>
+     in Houston.<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h3 style='margin-top:12.0pt;margin-right:0in;margin-bottom:5.0pt;margin-left:
+.5in;text-indent:-.25in'><span style='font-size:10.0pt;font-family:Symbol;
+mso-fareast-font-family:"Times New Roman";font-weight:normal'>·</span><span
+style='font-size:7.0pt;mso-fareast-font-family:"Times New Roman";font-weight:
+normal'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-fareast-font-family:"Times New Roman"'>Language Resources <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>1.<span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Java </p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in'>a.<span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><a
+href="http://www.oracle.com/technetwork/java/javase/downloads/"><span
+style='font-family:"Arial",sans-serif'>JDK Download</span></a> </p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in'><span
+class=GramE>b</span>.<span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><a
+href="https://docs.oracle.com/javase/8/docs/api/"><span style='font-family:
+"Arial",sans-serif'><!--
+          <li> 
+            <a href="http://www.cis.unisa.edu.au/~pizza/gj/Documents/">Generic Java Documentation</a> 
+          </li> 
+-->API
+Reference</span></a> </p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in'><span
+class=GramE>c</span>.<span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a href="http://drjava.org/"><span class=SpellE><span style='font-family:
+"Arial",sans-serif'>DrJava</span></span><span style='font-family:"Arial",sans-serif'>
+Programming Environment</span></a> </p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in'><span
+class=GramE>d</span>.<span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/OODesign.pdf"><span
+style='font-family:"Arial",sans-serif'>Elements of Object-Oriented Program
+Design by Prof. Cartwright</span></a> </p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:0in;margin-bottom:0in;
+margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in'>2.<span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Scheme (Racket) </p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in'>a.<span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><a
+href="http://www.htdp.org/"><span style='font-family:"Arial",sans-serif'>How to
+Design Programs</span></a> </p>
+
+<p class=MsoNormal style='margin-left:1.25in;text-indent:-.25in'><span
+class=GramE>b</span>.<span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><a
+href="http://racket-lang.org/"><span class=SpellE><span style='font-family:
+"Arial",sans-serif'>DrRacket</span></span><span style='font-family:"Arial",sans-serif'>
+Programming Environment</span></a> </p>
+
+<h3 style='margin-left:.5in;text-indent:-.25in'><span style='font-size:10.0pt;
+font-family:Symbol;mso-fareast-font-family:"Times New Roman";font-weight:normal'>·</span><span
+style='font-size:7.0pt;mso-fareast-font-family:"Times New Roman";font-weight:
+normal'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-fareast-font-family:"Times New Roman"'>References from the Web <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'>1.<span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><a
+href="http://www.cs.brown.edu/~sk/Publications/Books/ProgLangs/"><span
+class=SpellE><span style='font-family:"Arial",sans-serif'>Krishamurthi</span></span><span
+style='font-family:"Arial",sans-serif'>, <span class=SpellE>Shriram</span>. <em><span
+style='font-family:"Arial",sans-serif'>Programming Languages: Application and
+Interpretation</span></em></span></a>. This book is a descendant of lecture
+notes created by <span class=SpellE>Shriram</span> for a version of this course
+when <span class=SpellE>Shriram</span> was a teaching assistant over two decades
+ago.</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.75in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-family:"Arial",sans-serif'><a
+href="https://faculty.ksu.edu.sa/sites/default/files/essproglan.pdf">Friedman
+and Wand, Essentials of Programming Languages, 3<sup>rd</sup> ed.</a></span>
+(MIT Press, 2008)</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span>Friedman,
+Wand, and Haynes, <em>Essentials of Programming Languages</em>, 2nd ed. (MIT
+Press, 2001)<br>
+You can take a look at the following two chapters, which the authors prepared
+for the second edition, without buying the book: <o:p></o:p></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level2 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span><a
+href="ftp://ftp.cs.indiana.edu/pub/eopl/ch6.ps.Z"><span style='font-family:
+"Arial",sans-serif'>Parameter Passing</span></a> (<a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/eopl/ch6.pdf"><span
+style='font-family:"Arial",sans-serif'>Rice <span class=SpellE>JavaPLT</span>
+PDF</span></a>) <o:p></o:p></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level2 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span><a
+href="ftp://ftp.cs.indiana.edu/pub/eopl/ch13.ps.Z"><span style='font-family:
+"Arial",sans-serif'>Types and Type Inference</span></a> (<a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/eopl/ch13.pdf"><span
+style='font-family:"Arial",sans-serif'>Rice <span class=SpellE>JavaPLT</span>
+PDF</span></a>) </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/law-of-eval.ps"><span
+style='font-family:"Arial",sans-serif'>Evaluation rules for functional Scheme</span></a>
+(<a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/law-of-eval.pdf"><span
+style='font-family:"Arial",sans-serif'>Rice <span class=SpellE>JavaPLT</span>
+PDF</span></a>) </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'>&nbsp; </span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/JamEvaluation"><span
+style='font-family:"Arial",sans-serif'>References on evaluating Jam programs</span></a>
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/TypesI.pdf"><span
+style='font-family:"Arial",sans-serif'>Lecture Notes on Types I</span></a> </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/TypesII.pdf"><span
+style='font-family:"Arial",sans-serif'>Lecture Notes on Types II</span></a></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/IntroToSystemF.pdf"><span
+style='font-family:"Arial",sans-serif'>Introduction to System F (Polymorphic
+Lambda-Calculus)</span></a> </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Code"><span
+style='font-family:"Arial",sans-serif'>Scheme code from Class Lectures</span></a>
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/essence-retro.pdf"><span
+style='font-family:"Arial",sans-serif'>The Essence of Compiling with
+Continuations</span></a> by Flanagan et al. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>11.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'>&nbsp;</span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/wilson92uniprocessor.pdf"><span
+style='font-family:"Arial",sans-serif'>Uniprocessor Garbage Collection
+Techniques</span></a> by Paul Wilson </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>12.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span><a
+href="http://www.amazon.com/Garbage-Collection-Algorithms-Automatic-Management/dp/0471941484"><span
+style='font-family:"Arial",sans-serif'>Garbage Collection [canonical textbook]</span></a>
+by Jones and <span class=SpellE>Lins</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>13.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-spacerun:yes'> </span><a
+href="http://www.hpl.hp.com/personal/Hans_Boehm/gc/papers/pldi93.ps.Z"><span
+style='font-family:"Arial",sans-serif'>Space Efficient Conservative Garbage
+Collection</span></a> by Hans Boehm (<a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/pldi93.pdf"><span
+style='font-family:"Arial",sans-serif'>Rice <span class=SpellE>JavaPLT</span>
+PDF</span></a>) </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>14.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span>Hans
+Boehm's <a href="https://www.hboehm.info/gc/"><span style='font-family:"Arial",sans-serif'>Conservative
+GC Webpage</span></a> </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>15.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'>&nbsp;</span><a
+href="https://www.javaworld.com/article/2078623/core-java/jvm-performance-optimization-part-1-a-jvm-technology-primer.html"><span
+style='font-family:"Arial",sans-serif'>JVM Performance Optimization</span></a>.
+The first article in a five part series (with the remaining four parts linked
+from the first article) on JVM internals and how to write Java source code to
+use them efficiently. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>16.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><a
+href="http://www.cs.umd.edu/~pugh/java/memoryModel/"><span style='font-family:
+"Arial",sans-serif'>Java Memory Model</span></a></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>17.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'><span style='mso-spacerun:yes'> </span></span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/Revised%20Thread%20Synchronization%20Policies%20in%20DrJava.doc"><span
+style='font-family:"Arial",sans-serif'>Revised Thread Synchronization Policies
+in <span class=SpellE>DrJava</span> (doc)</span></a> <span class=GramE>( </span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/Revised%20Thread%20Synchronization%20Policies%20in%20DrJava.pdf"><span
+style='font-family:"Arial",sans-serif'>pdf</span></a>). Since <span
+class=SpellE>DrJava</span> is built using the Java Swing library, it must
+conform to the synchronization policies for Swing. Unfortunately, the official
+Swing documentation is sparse and misleading in places, so this document includes
+a discussion of the Swing synchronization policies.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>18.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><a
+href="http://java.sun.com/docs/books/tutorial/uiswing/concurrency/index.html"><span
+style='font-family:"Arial",sans-serif'>Lesson: Concurrency in Swing</span></a>.
+This lesson discusses concurrency as it applies to Swing programming. It assumes
+that you are already familiar with the content of the <a
+href="http://java.sun.com/docs/books/tutorial/essential/concurrency/index.html"><span
+style='font-family:"Arial",sans-serif'>Concurrency</span></a> lesson in the <a
+href="http://java.sun.com/docs/books/tutorial/essential/index.html"><span
+style='font-family:"Arial",sans-serif'>Essential Classes</span></a> trail.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>19.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><a
+href="http://www.vogella.com/tutorials/JavaConcurrency/article.html"><span
+style='font-family:"Arial",sans-serif'>Java concurrency (multi-threading):
+Tutorial</span></a>. A tutorial on expressing concurrent computation in Java
+using threads. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>20.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><a
+href="http://www.comp.nus.edu.sg/~cs3283/ftp/Java/swingConnect/tech_topics/threads3/threads3.html"><span
+style='font-family:"Arial",sans-serif'>The Last Word in Swing Threads.</span></a>
+An article on the perils of accessing Swing components from outside the event
+dispatch thread.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>21.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/whyfp90.pdf"><span
+style='font-family:"Arial",sans-serif'>Why Functional Programming Matters (as
+analyzed in 1990).</span></a> </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>22.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='font-size:7.0pt'>&nbsp;</span><a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/WhyFunctionalProrammingMattered.pdf"><span
+style='font-family:"Arial",sans-serif'>Why Functional Programming Mattered
+(gazing at programming technology in 2017).</span></a> </p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:.75in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l4 level1 lfo9'><![if !supportLists]><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>23.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><a
+href="http://www.cs.rice.edu/~javaplt/311"><span style='font-family:"Arial",sans-serif'>Old
+Course Website</span></a> </p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<div style='margin-top:5.0pt;margin-bottom:5.0pt'>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=6 width="100%" align=center>
+
+</span></div>
+
+</div>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>Course Summary <o:p></o:p></span></h2>
+
+<p style='margin-top:0in;margin-right:0in;margin-bottom:4.0pt;margin-left:0in'><span
+style='font-family:"Times New Roman",serif'>COMP 411/511 is an introduction to
+the principles of programming languages. It focuses on: </span></p>
+
+<ul style='margin-top:0in' type=disc>
+ <li class=MsoNormal style='margin-bottom:4.0pt;mso-list:l2 level1 lfo6;
+     tab-stops:list .5in'><span style='mso-fareast-font-family:"Times New Roman"'>identifying
+     the conceptual building blocks from which languages are assembled and <o:p></o:p></span></li>
+ <li class=MsoNormal style='margin-bottom:4.0pt;mso-list:l2 level1 lfo6;
+     tab-stops:list .5in'><span class=GramE><span style='mso-fareast-font-family:
+     "Times New Roman"'>specifying</span></span><span style='mso-fareast-font-family:
+     "Times New Roman"'> the semantics, including common type systems, of
+     programming languages. <o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal>In the lecture materials, interpreters are written in
+concise functional notation using Scheme (<a href="http://racket-lang.org/"><span
+style='font-family:"Arial",sans-serif'>Racket</span></a>). In some cases,
+supplementary material showing how the same interpreters can be written in
+another language such as Scala (using explicit typing) are provided. The
+functional subset of Scala and the ML family of languages (notably <span
+class=SpellE>OCaml</span>) are very well-suited to writing purely functional
+interpreters, yet they also support the limited use of mutation (<span
+class=SpellE>imperativity</span>) as well. I personally am not particularly
+fond of the ML family of languages for writing larger software systems because
+they do not support inheritance and object-oriented design. In contrast,
+type-safe OO languages like Java and <span class=SpellE>Kotlin</span> are very
+good vehicles for <em>implementing</em> these interpreters including the
+disciplined use of imperative code to greatly improve program <span
+class=GramE>efficiency.</span> On the other hand, mainstream OO language do not
+provide a good representation for explaining abstract concepts because they are
+too wordy and the OO structure obscures the simple algebraic structure of
+abstract syntax and structural recursion used in simple interpreters. For this
+reason, we will present sample code in lecture in mostly functional
+Scheme/Racket. If you have not seen Scheme/Racket before, you will need to
+learn the core constructs of this language family which is widely imitated in
+many domain specific languages (DSLs) embedded in applications, such as <span
+class=SpellE>Emacs</span> Lisp embedded in Gnu <span class=SpellE>Emacs</span>.
+</p>
+
+<p><span style='font-family:"Times New Roman",serif'>A secondary theme of this
+course is software engineering. All of the programming assignments in this
+course are conducted in Java using <i>test-driven development, </i>a major
+tenet of Extreme Programming and other “agile” protocols for production
+software development.<span style='mso-spacerun:yes'>  </span>In the past, we
+have also recommended <i style='mso-bidi-font-style:normal'>pair programming</i>
+but that is not currently feasible given remote teaching mandates, social
+distancing constraints, and reliance on GitHub Classroom which makes the
+administration of project teams very cumbersome for both the course staff and
+project teams.<span style='mso-spacerun:yes'>  </span>A compelling reason for
+using Java is that it is widely used for software development in industry and
+it supports low-level programming where appropriate. Java Virtual Machines are
+expensive to start (the Achilles heel of Java IMO) and Java applications are
+compiled &quot;Just <span class=GramE>In</span> Time&quot; (JIT) which has
+visible costs early in program execution. On the other hand, well-written Java
+code that has been &quot;warmed up&quot; (run on sufficient inputs to force the
+JIT compilation of all of the compute intensive parts of the application) is
+surprisingly fast. </span></p>
+
+<p><span style='font-family:"Times New Roman",serif'>COMP 411/511 consists of
+three parts: </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·</span><span style='font-size:
+7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class=GramE>The</span>
+first part focuses on specifying the syntax and the semantics of programming
+languages. The former is introduced via simple parsing (translations) of
+program text into abstract syntax. More detailed aspects of parsing (such as
+lexical analysis and advanced parsing methods) are left to <a
+href="http://www.owlnet.rice.edu/~comp412/"><span style='font-family:"Arial",sans-serif'>COMP
+412</span></a>, a course on compilers. In practice, most domain specific
+languages do not need a sophisticated parser; in fact, so-called &quot;internal
+DSLs&quot; rely on the parser and compiler of the host language. Scala, a
+putative successor to Java which compiles to Java byte code, is specifically
+designed to support the easy implementation of internal DSLs. In addition,
+&quot;external DSLs&quot; (which are implemented by interpreters akin to the
+interpreter projects assigned in this course) often rely on simple manually
+written parsers based on &quot;recursive descent&quot; which is the approach to
+writing parsers taught in this course. The other attractive option for parsing
+external DSLs is to use a parser generator like ANTLR which is based on a
+simple extension of recursive descent parsing. </p>
+
+<p style='margin-top:5.0pt;margin-right:0in;margin-bottom:19.2pt;margin-left:
+.25in'><span style='font-family:"Times New Roman",serif'>In the course, you
+will implement the semantics of a comprehensive collection of programming
+language constructs using mostly functional interpreters derived from simple
+reduction (textual rewriting) semantics for the constructs. The constructs
+include arithmetical and conditional expressions, lexical binding of variables,
+blocks, first-class functions, assignment and mutation, basic control
+constructs (loop exits, first-class continuations, simple threads), and dynamic
+dispatch. </span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:19.2pt;
+margin-left:.25in;text-indent:-.25in'><span style='font-size:10.0pt;font-family:
+Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class=GramE>The</span> second part illustrates how interpreters
+and reduction semantics can be used to analyze important behavioral properties
+of programming languages. Two examples are covered: type safety and memory
+safety. Type safety guarantees that programs respect syntactically defined type
+abstraction boundaries and never raise certain classes of error signals. Memory
+safety guarantees that programs release memory if it is provably useless for the
+remainder of the evaluation. The standard technique for ensuring memory safety
+is automatic storage management, which is typically implemented using reference
+counting or garbage collection. Automatic storage management (which is present
+in all high-level programming languages including Java, Python, JavaScript, and
+Swift) never deletes data objects that are reachable in subsequent program
+execution. Type safety typically depends on memory safety. We will study the
+formal type-checking process incorporated in the ML family of languages, which
+has been adopted in part by sophisticated OO languages like Scala and Swift.</p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;
+margin-left:.25in;text-indent:-.25in'><span style='font-size:10.0pt;font-family:
+Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class=GramE>The</span> third part shows how interpreters can
+systematically be transformed so that they use fewer and fewer language
+facilities, demonstrating how to implement very high-level languages at the
+machine instruction level. The key transformations are the explicit
+representation of closures as records and the conversion of program control
+flow to continuation-passing style. Using these transformations, a recursive
+interpreter can readily be re-written in a low-level language like C/C++ or
+even assembly language. These transformations can be applied both to
+interpreters and to arbitrary programs. If we apply these transformations to an
+interpreter, the result is a low-level interpreter that is easily implemented
+in machine code. The process of applying these transformations to arbitrary
+input programs yields a high-level description of program compilation, a
+process which is explored in more detail in <a
+href="http://https/www.clear.rice.edu/comp412/"><span style='font-family:"Arial",sans-serif'>COMP
+412.</span></a> </p>
+
+<p><span style='font-family:"Times New Roman",serif'>This course material
+enables students to analyze the semantics and pragmatics of the old, new, and
+future programming languages that they are likely to encounter in the workplace
+(e.g., C, C++, Java, JavaScript, Swift, C#, Python). It also enables students
+to design and implement efficient interpreters for new languages or DSLs
+embedded in software applications. Most importantly, it equips students to
+become master software developers because they will be able to define and
+implement whatever linguistic extensions that are appropriate for simplifying
+the construction of a particular software system. </span></p>
+
+<p><span style='font-family:"Times New Roman",serif'>My <a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/OODesign.pdf"><span
+style='font-family:"Arial",sans-serif'>notes on object-oriented program design</span></a>
+briefly describe the design patterns that I recommend using to express
+functional programming abstractions in Java. If you have little prior
+experience in writing functional programming code in Java, I highly recommend
+skimming them. </span></p>
+
+<p><span style='font-family:"Times New Roman",serif'>For students interested in
+operational (syntax-based) semantics, I recommend reading <a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/semantics.pdf"><span
+style='font-family:"Arial",sans-serif'>notes by <span class=SpellE>Walid</span>
+<span class=SpellE>Taha</span></span></a> (now at <span class=SpellE>Halmstad</span>
+University in Sweden and Facebook in US) on big-step versus small-step
+semantics. I strongly prefer small-step (<i style='mso-bidi-font-style:normal'>syntactic</i>)
+semantics, so it is the only form of operational semantics that we will use in
+this class, but big-step semantics is often used in the programming languages
+literature. </span></p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Differences between
+COMP 411 and COMP 511<o:p></o:p></span></h3>
+
+<p><span style='font-family:"Times New Roman",serif'>COMP 511 formerly included
+all of the material from COMP 411 plus a small amount of supplemental material.
+This year, that distinction is being dropped. COMP 511 is identical in content
+to COMP 411.</span></p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>More Course
+Information <o:p></o:p></span></h3>
+
+<p><span style='font-family:"Times New Roman",serif'>Please take a look at the <a
+href="https://www.cs.rice.edu/~javaplt/411/22-spring/info.html"><span
+style='font-family:"Arial",sans-serif'>course information/policies</span></a>
+page, which is referenced in the first few class lectures. </span></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></h2>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>Course Schedule<o:p></o:p></span></h2>
+
+<table class=MsoNormalTable border=1 cellspacing=3 cellpadding=0
+ summary="Lecture Schedule" width="101%" style='width:101.98%;mso-cellspacing:
+ 1.8pt;border:solid windowtext 1.0pt;mso-yfti-tbllook:1184;mso-padding-alt:
+ 0in 0in 0in 0in' id="schedule_tbl">
+ <colgroup id="num_colgroup"></colgroup><colgroup id="date_colgroup"></colgroup><colgroup id="day_colgroup"></colgroup><colgroup id="topic_colgroup"></colgroup><colgroup id="reference_colgroup"></colgroup><colgroup id="assignment_colgroup"></colgroup>
+ <thead>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+   <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:
+   .75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal><b><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>#</span></b></p>
+   </td>
+   <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-size:11.0pt;font-family:"Arial",sans-serif'>Date </span></b></p>
+   </td>
+   <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:
+   .75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-size:11.0pt;font-family:"Arial",sans-serif'>Day </span></b></p>
+   </td>
+   <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;
+   padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-size:11.0pt;font-family:"Arial",sans-serif'>Topic </span></b></p>
+   </td>
+   <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;
+   padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-size:11.0pt;font-family:"Arial",sans-serif'>Reference </span></b></p>
+   </td>
+   <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;
+   padding:.75pt .75pt .75pt .75pt'>
+   <p class=MsoNormal align=center style='text-align:center'><b><span
+   style='font-size:11.0pt;font-family:"Arial",sans-serif'>Assignment </span></b></p>
+   </td>
+  </tr>
+ </thead>
+ <tr style='mso-yfti-irow:1'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/23-spring/Lectures/1.pdf">1</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/9</span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/info.html">Information</a>
+  &amp; <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/01.html">Motivation</a>
+  </span></p>
+  </td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'></td>
+  <td width="29%" rowspan=2 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/23-spring/Lectures/2.pdf">2</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/11
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" rowspan=2 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/02.html">Parsing</a>
+  </span></p>
+  </td>
+  <td width="27%" rowspan=2 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="http://www.bottlecaps.de/rr/ui">Web site describing Syntax Diagrams</a>
+  <br>
+  (For EBNF see <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Assignments/1/index.html">Project
+  1</a>) <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/CPSyntax.pdf">Pascal
+  Syntax Diagrams</a> <br>
+  <a
+  href="https://www.tutorialspoint.com/automata_theory/context_free_grammar_introduction.htm">Tutorial
+  on CFGs</a> <br>
+  <a href="http://docs.oracle.com/javase/specs/jls/se8/jls8.pdf">Java Lang
+  Specification</a> </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/23-spring/Lectures/3.pdf">3</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/13
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  1, assigned 1/13</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/16
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Martin
+  Luther King Holiday</span></em><span style='font-size:11.0pt;font-family:
+  "Arial",sans-serif'> </span></p>
+  </td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/4.pdf">4</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/18
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/03.html">The
+  Scope of Variables</a> </span></p>
+  </td>
+  <td width="27%" rowspan=2 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>PLAI</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, Ch. 3-4 </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/5.pdf">5</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/20
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="25%" rowspan=2 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/04.html">Syntactic
+  Interpreters</a> </span></p>
+  </td>
+  <td style='border:solid windowtext 1.0pt;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  1 due 10am, 1/20</span></p>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  2 assigned, 1/20</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/6.pdf">6</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/23
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Review/review1.pdf">Brief
+  Review of Lectures 1-6</a> </span></p>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/OODesign.pdf">Notes
+  on OO Program Design</a></span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt'><span style='font-size:11.0pt;
+  font-family:"Arial",sans-serif'><span style='mso-spacerun:yes'> </span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/7.pdf">7</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/25</span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" rowspan=3 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/05.html">Meta
+  Interpreters</a></span></p>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/05.supp.html">Meta
+  Errors</a> </span></p>
+  </td>
+  <td width="27%" rowspan=3 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>PLAI</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, Ch. 4-6 </span></p>
+  </td>
+  <td width="29%" rowspan=5 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/8.pdf">8</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/27
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/9.pdf">9</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>1/30
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/10.pdf">10</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/1
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" rowspan=3 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/06.html">Data
+  Domains for Recursive Definitions</a> </span></p>
+  <p><span style='font-size:11.0pt'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/07.html">Recursive
+  Definitions and Environments</a> </span></p>
+  </td>
+  <td width="27%" rowspan=4 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-bottom:12.0pt'><span style='font-size:11.0pt;
+  font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/domains.pdf">Intro
+  to Domain Theory </a>&nbsp;<br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/Y.pdf">The
+  Why of Y</a></span></p>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/RecPrograms.pdf">Recursive
+  Programs in First-Order Logic</a> <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/p22-cartwright.pdf">Types
+  as Intervals</a> <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/07.5.html">Lambda
+  Calculus Model</a> <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/supplemental.pdf">Supplemental
+  Material</a> </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/11.pdf">11</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/3
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/12.pdf">12</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/6
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="29%" rowspan=2 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  2 due 10am, 2/6<br>
+  Project 3 assigned 2/6 </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/13.pdf">13</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/8
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Recursive
+  Binding </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/10
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Spring
+  Recess</span></em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>
+  <span style='mso-spacerun:yes'>  </span>REMAINDER of Schedule has not yet
+  been updated!</span></p>
+  </td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:16'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/14.pdf">14</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/14
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Eliminating
+  Binding (SD λ-abstraction) </span></p>
+  </td>
+  <td width="27%" rowspan=4 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Essentials</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, <span class=SpellE>ch.</span>
+  3.7, 3.9 <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/exercises.html">Hand
+  Evaluation Exercises</a> <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/JamEvaluation">Solution
+  to Hand Evaluation Exercises</a> </span></p>
+  </td>
+  <td width="29%" rowspan=3 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:17'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/15.pdf">15</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/16
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" rowspan=3 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/08.html">Assignment
+  and Mutability</a> </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/16.pdf">16</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/18
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/21
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="29%" rowspan=3 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  3 due 10am, 2/21 <br>
+  Project 4 and XC Project 4xc, assigned 2/21 </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/17.pdf">17</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/23
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" rowspan=3 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/09.html">Run-time
+  Environment &nbsp;&nbsp;Representation and Control</a> </span></p>
+  </td>
+  <td width="27%" rowspan=3 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Essentials</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, <span class=SpellE>ch.</span>
+  7, 8 <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/SebestaOnAlgolRuntime.pdf"><span
+  class=SpellE>Powerpoint</span> slides from Sebesta's <em><span
+  style='font-family:"Arial",sans-serif'>Concepts of <span class=SpellE>ProgrammingLanguages</span></span></em></a>
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/18.pdf">18</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/25
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>2/28
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="29%" rowspan=3 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:23'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/19.pdf">19</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/2
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/10.html">Object-Oriented
+  Languages</a> </span></p>
+  </td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Essentials</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, <span class=SpellE>ch.</span>
+  5 </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24'>
+  <td width="3%" rowspan=2 style='width:3.54%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/4
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="25%" rowspan=2 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Review/SampleMid.pdf">Sample
+  MT Exam</a> <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Review/SampleMidWithSol.pdf">Solutions
+  to 1,2,4,6</a> <br>
+  <a href="bhttps://www.cs.rice.edu/~javaplt/411/22-spring/Midterm/problem3.pdf">Solution
+  to 3</a> <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Midterm/cbneval.txt">Solution
+  to 5(<span class=SpellE>i</span>)</a> <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Midterm/cbveval.txt">Solution
+  to 5(ii)</a> </span></p>
+  </td>
+  <td width="27%" rowspan=2 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Essentials</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, <span class=SpellE>ch.</span>
+  3.8 </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25'>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/7
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  4 due 10am, 3/7 <br>
+  Project 5/XC Project 5xc, assigned 3/7 </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/8</span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span class=SpellE><span style='font-size:11.0pt;
+  font-family:"Arial",sans-serif'>Tu</span></span><span style='font-size:11.0pt;
+  font-family:"Arial",sans-serif'> </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>MT
+  Examination 7-10pm</span></em></p>
+  </td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:27'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/20.pdf">20</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/9
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" rowspan=2 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/11.html">What Is
+  a Type?</a> <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/12.html">Types
+  and Safety</a> <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/13.html">Types
+  and Datatype</a> </span></p>
+  </td>
+  <td width="27%" rowspan=2 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Essentials</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, <span class=SpellE>ch.</span>
+  4 <br>
+  <em><span style='font-family:"Arial",sans-serif'>Essentials</span></em>, <span
+  class=SpellE>ch.</span> 6 <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/AltTypeInference.pdf">Type
+  Inference Guide</a> </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:28'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/21.pdf">21</a></span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/11
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>XC
+  Project 4xc due 10am, 3/11</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/14-3/18
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M-F
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Spring
+  Break — No Classes</span></em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>
+  </span></p>
+  </td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;background:
+  #E0E0E0;padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:30'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/22.pdf">22</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/21
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/14.html">Polymorphism</a>
+  <br>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/15.html">Implicit
+  Polymorphism</a> <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/unification.pdf">Survey
+  of Unification</a> </span></p>
+  </td>
+  <td width="27%" rowspan=2 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Draft
+  Racket program for inefficient unification </span></p>
+  </td>
+  <td width="29%" rowspan=2 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:31'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/22a.pdf">22'</a>
+  <a href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/23.pdf">23</a>
+  </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/23
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/16.html">Final
+  Words on Types</a> </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:32;height:.7in'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:.7in'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/24.pdf">24</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:.7in'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/25
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:.7in'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt;height:.7in'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/17.html">Meaning
+  of Function Calls</a> </span></p>
+  </td>
+  <td width="27%" rowspan=4 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt;height:.7in'>
+  <p class=MsoNormal><em><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Essentials</span></em><span
+  style='font-size:11.0pt;font-family:"Arial",sans-serif'>, <span class=SpellE>ch.</span>
+  7-8 </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt;height:.7in'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  6 assigned 3/25</span></p>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  5, 5xc due 10am, 3/25</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:33'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/25.pdf">25</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/28
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/cps.html">Continuation-Passing
+  Style</a> </span></p>
+  </td>
+  <td width="29%" rowspan=5 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:34'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/26.pdf">26</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>3/30
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/18.html">Explaining
+  <span class=SpellE><code><b><span style='font-size:10.0pt'>letcc</span></b></code></span>
+  and <code><b><span style='font-size:10.0pt'>error</span></b></code></a> </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:35'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/27.pdf">27</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/1</span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:36'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/28.pdf">28</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/4
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="25%" style='width:25.14%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'></td>
+  <td width="27%" style='width:27.78%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/DynamicStorageAllocationSurvey.pdf">Dynamic
+  Storage Allocation Survey</a> </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:37'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/29.pdf">29</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/6
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+  <td width="25%" rowspan=4 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Notes/11/20.html">Garbage
+  Collection</a> </span></p>
+  </td>
+  <td width="27%" rowspan=4 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Readings/wilson92uniprocessor.pdf">Uniprocessor
+  Garbage Collection Techniques</a> </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:38'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/8
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  6 due 11am, 4/8<br>
+  Project 7 assigned 4/8</span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:39'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/11
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+  <td width="29%" rowspan=5 style='width:29.98%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:40'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Lectures/30.pdf">30</a> </span></p>
+  </td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/13
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:41'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/17
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="25%" rowspan=4 style='width:25.14%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'><a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Review/SampleExam2.pdf">Sample
+  Final Exam</a> <br>
+  <a
+  href="https://www.cs.rice.edu/~javaplt/411/22-spring/Review/SampleExam2WithSolRev.pdf">Sample
+  Final Exam With Solutions</a> </span></p>
+  </td>
+  <td width="27%" rowspan=4 style='width:27.78%;border:solid windowtext 1.0pt;
+  padding:.75pt .75pt .75pt .75pt'></td>
+ </tr>
+ <tr style='mso-yfti-irow:42'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/20
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>M
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:43'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/22
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>W
+  </span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:44;mso-yfti-lastrow:yes;height:30.15pt'>
+  <td width="3%" style='width:3.54%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:30.15pt'></td>
+  <td width="6%" style='width:6.0%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:30.15pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>4/24
+  </span></p>
+  </td>
+  <td width="5%" style='width:5.34%;border:solid windowtext 1.0pt;padding:.75pt .75pt .75pt .75pt;
+  height:30.15pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>F
+  </span></p>
+  </td>
+  <td width="29%" style='width:29.98%;border:solid windowtext 1.0pt;padding:
+  .75pt .75pt .75pt .75pt;height:30.15pt'>
+  <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Arial",sans-serif'>Project
+  7 due 11:59pm 4/24 </span></p>
+  </td>
+ </tr>
+</table>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>&nbsp;<o:p></o:p></span></h2>
+
+<h2 align=center style='text-align:center'><span style='mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=6 width="100%" align=center>
+
+</span></h2>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>Accommodations for
+Students with Special Needs <o:p></o:p></span></h2>
+
+<p>Students with disabilities are encouraged to contact me during the first two
+weeks of class regarding any special needs. Students with disabilities should
+also contact Disabled Student Services in the <a
+href="http://studentcenter.rice.edu/">Ley Student Center</a> and the <a
+href="https://dss.rice.edu/">Rice Disability Support Services.</a> <o:p></o:p></p>
+
+</div>
+</notesxu!doctype>
+</body>
+
+<div style="all:initial"></div>
+</html>
