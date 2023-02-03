@@ -1,0 +1,552 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>COMP 411 Principles of Programming Languages</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Arial",sans-serif;
+	color:windowtext;
+	font-weight:bold;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-style-link:"Body Text Indent Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:#0000EE;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#551A8B;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:.5in;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+code
+	{font-family:"Courier New";}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Courier New";
+	color:windowtext;}
+tt
+	{font-family:"Courier New";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Calibri Light",sans-serif;
+	color:#2E74B5;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Calibri Light",sans-serif;
+	color:#1F4D78;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	color:black;}
+span.BodyTextIndentChar
+	{mso-style-name:"Body Text Indent Char";
+	mso-style-link:"Body Text Indent";
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.class1, li.class1, div.class1
+	{mso-style-name:class1;
+	margin-right:0in;
+	margin-left:.5in;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+span.m
+	{mso-style-name:m;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=EN-US link="#0000EE" vlink="#551A8B" alink="#ff0000">
+
+<div class=WordSection1>
+
+<table class=MsoNormalTable border=0 cellspacing=3 cellpadding=0 width="100%"
+ style='width:100.0%'>
+ <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal style='margin-right:7.5pt'><span style='font-family:"Times New Roman",serif'><img
+  width=122 height=123
+  src="https://www.cs.rice.edu/~javaplt/411/22-spring/logo.gif"
+  alt="Rice University"></span><sup><span style='font-size:72.0pt;font-family:
+  "Times New Roman",serif'>&nbsp;COMP 411/511</span></sup><span
+  style='font-family:"Times New Roman",serif'> </span></p>
+  <p class=class1 style='margin-left:0in'><b><span style='font-size:36.0pt;
+  font-family:"Times New Roman",serif;color:#3366FF'>Project 3:&nbsp;&nbsp; Lazy
+  Evaluation and Recursive Definitions</span></b> </p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<h2>Points: 100</h2>
+
+<h2>Provided Code</h2>
+
+<!-- <p><a href="../../Assignments/3/java/">Supporting Code</a></p> -->
+
+<p style='margin-left:0in'>The class solution to Project 2 appears in the
+support code for Project 3 on GitHub Classroom in a folder named <b><span
+style='font-family:Consolas'>Solution to Project 2</span></b>. The folder <b>src</b>
+folder contains a collection of files taken from the class solution to <b><span
+style='font-family:Consolas'>Project 3</span></b> similar in scope to those
+provided from Project 2. You only need to revise the code in the interpreter
+file <b><span style='font-family:Consolas'>Interpreter.java</span></b> and fill
+in the missing code in a new file called <b><span style='font-family:Consolas'>Syntax.java</span></b>
+supporting a syntax check after the program has been parsed but before it is
+executed. You do not need to create any additional files but you have that
+option if you think is enhances program organization or clarity. You must
+support the same testing API required to run the provided JUnit4 tests.  In
+addition, you need to write additional tests (either by adding tests to <b><span
+style='font-family:Consolas'>Assign3Test.java</span></b> or by creating
+additional test files with names ending in <b><span style='font-family:Consolas'>Test</span></b>.</p>
+
+<p style='margin-left:0in'>The support code fails most of the provided unit
+tests because many methods are missing.  Nearly all of the tests from Project 2
+fail because the code that parses and evaluates Jam programs is generalized in
+Project 3.  This missing code which you must fill in throws <b><span
+style='font-family:Consolas'>NullPointerException</span></b>s.</p>
+
+<h2>Overview</h2>
+
+<p style='margin-left:0in'><b>Task</b> &nbsp; Your task is to extend and modify
+your interpreter from Assignment 2 or extend the provided support code to: </p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol;color:windowtext'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:windowtext'>perform the context-sensitive
+checking required to confirm that the input program is a legal program;</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol;color:windowtext'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:windowtext'>enforce run-time safety in Jam
+programs by detecting illegal operations before they are executed and throwing
+a Java run-time error explaining what illegal Jam operation was attempted (no
+meta errors!); </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol;color:windowtext'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:windowtext'>change the semantics of the </span><tt><b><span
+style='font-family:Consolas;color:windowtext'>let</span></b></tt><span
+style='color:windowtext'> construct to support recursive bindings
+(&quot;recursive let&quot;); and</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol;color:windowtext'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:windowtext'>support the optional lazy
+evaluation of the </span><tt><b><span style='font-family:Consolas;color:windowtext'>cons</span></b></tt><span
+style='color:windowtext'> constructor using both the call-by-name and the
+call-by-need implementation of lazy evaluation.</span></p>
+
+<p style='margin-left:0in'>The details of the each of these extensions is
+described in the following paragraphs. Some of the work has already been done
+in the support code.  To complete your Project 3 interpreter, you do not need
+to modify any of the provided support files except <b><span style='font-family:
+Consolas'>Interp.java</span></b> and <b><span style='font-family:Consolas'>Syntax.java</span></b>. 
+You also either need to create a new test file containing your own tests or add
+the requisite tests to the provided file <b><span style='font-family:Consolas'>Assign3Test.java.</span></b>
+</p>
+
+<p style='margin-left:0in'><strong><span style='font-family:"Arial",sans-serif'>Context-Sensitive
+Checking</span></strong> &nbsp; The context sensitive constraints on Jam syntax
+are most easily by performing a separate &quot;checking pass&quot; over the
+abstract syntax tree right after it has been constructed. There are two
+context-sensitive conditions that Jam programs must satisfy to be well-formed: </p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol;color:windowtext'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:windowtext'>There are no free variables.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol;color:windowtext'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:windowtext'>The same variable name cannot
+appear twice in the same parameter list (of a </span><tt><b><span
+style='font-family:Consolas;color:windowtext'>map</span></b></tt><span
+style='color:windowtext'>) or the same collection of let names (introduced in a
+</span><tt><b><span style='font-family:Consolas;color:windowtext'>let</span></b></tt><span
+style='color:windowtext'> binding).</span></p>
+
+<p style='margin-left:0in'>If you find either of these errors, throw a <tt><b><span
+style='font-family:Consolas'>SyntaxException</span></b></tt> (as defined in the
+support code) with a descriptive error message and abort execution.</p>
+
+<p style='margin-left:0in'>The context-sensitive checker should be run before
+the expression is evaluated. Note that the context-sensitive checker does not
+care which unary or binary operator was used, or how many arguments were passed
+to a primitive function.  A stub file for writing this checker as a visitor is
+provided in the file <b><span style='font-family:Consolas'>Syntax.java</span></b>.
+</p>
+
+<p style='margin-left:0in'><b>Safety</b>&nbsp; In this project (and all
+subsequent projects), your interpreter is responsible for catching Jam run-time
+errors. Do not rely on the run-time checking performed in executing Java code
+(meta-errors). All Jam run-time error messages should be of type <tt><b><span
+style='font-family:Consolas'>EvalException</span></b></tt> generated directly
+by your interpreter. </p>
+
+<p style='margin-left:0in'>Note: It is not enough to just wrap the entire
+interpreter in a <tt><b><span style='font-family:Consolas'>try { ... }
+catch(Throwable t) { ... }</span></b></tt> block. The exception must be
+generated at the point the Jam run-time error occurs.</p>
+
+<p style='margin-left:0in'>Safety checking obviously includes confirming that
+operators are applied to arguments of the proper type. Hence, the unary
+operators <tt><b><span style='font-family:Consolas'>+</span></b></tt> and <tt><b><span
+style='font-family:Consolas'>-</span></b></tt> and the binary operators <tt><b><span
+style='font-family:Consolas'>+</span></b></tt>, <tt><b><span style='font-family:
+Consolas'>-</span></b></tt>, <code><b><span style='font-family:Consolas'>/</span></b></code>,
+<tt><b><span style='font-family:Consolas'>*</span></b></tt>, <tt><b><span
+style='font-family:Consolas'>&lt;</span></b></tt>, <tt><b><span
+style='font-family:Consolas'>&lt;=</span></b></tt>, <tt><b><span
+style='font-family:Consolas'>&gt;</span></b></tt> and <tt><b><span
+style='font-family:Consolas'>&gt;=</span></b></tt>, may only be applied to
+integer values. Similarly, the unary operator <code><b><span style='font-family:
+Consolas'>~</span></b></code> and binary operators <code><b><span
+style='font-family:Consolas'>&amp;</span></b></code> and <tt><b><span
+style='font-family:Consolas'>|</span></b></tt> may only be applied to boolean
+values. In general, you must check that every language construct is applied to
+the correct number and type of values including checking that the test value in
+a Jam <tt><b><span style='font-family:Consolas'>if</span></b></tt> is a boolean
+value. Many of these checks were already stipulated as part of the semantics of
+Jam constructs given in Assignment 2. In no case should your interpreters
+generate run-time Java errors other than insufficient machine resource errors
+such as StackOverflow or OutOfMemory (heap overflow) errors, which are <i>not</i>
+classified as meta-errors. Of course, you are welcome to catch the
+corresponding exceptions and report your own errors.</p>
+
+<p style='margin-left:0in'><b>Lazy cons</b>&nbsp; For all three of your
+interpreters from Project 2, you will add two lazy <tt><b><span
+style='font-family:Consolas'>cons</span></b></tt> evaluation options that defer
+the evaluation of both arguments of a <tt><b><span style='font-family:Consolas'>cons</span></b></tt>
+construction. The data object representing the deferred evaluation is called a <em><span
+style='font-family:"Arial",sans-serif'>suspension</span></em>. Given a <tt><b><span
+style='font-family:Consolas'>cons</span></b></tt> node containing suspensions,
+the <tt><b><span style='font-family:Consolas'>first</span></b></tt> and <tt><b><span
+style='font-family:Consolas'>rest</span></b></tt> operations evaluate the
+corresponding argument expressions in the environment where the expressions
+would have been evaluated without laziness.</p>
+
+<p style='margin-left:0in'>Lazy <tt><b><span style='font-family:Consolas'>cons</span></b></tt>
+obeys the following equations:</p>
+
+<pre style='margin-left:0in'><b><span style='font-family:Consolas'>first(cons(M,N)) = M</span></b></pre><pre
+style='margin-left:0in'><b><span style='font-family:Consolas'>rest(cons(M,N)) = if list?(N) then N else error</span></b></pre>
+
+<p style='margin-left:0in'>for all Jam expressions <tt><b><span
+style='font-family:Consolas'>M</span></b></tt> and <tt><b><span
+style='font-family:Consolas'>N</span></b></tt>, including expressions that
+diverge or generate run-time errors. Recall that <tt><b><span style='font-family:
+Consolas'>list?</span></b></tt> is simply the disjunction of <tt><b><span
+style='font-family:Consolas'>null?</span></b></tt> and <tt><b><span
+style='font-family:Consolas'>cons?</span></b></tt>.</p>
+
+<p style='margin-left:0in'>The lazy versions of <tt><b><span style='font-family:
+Consolas'>cons</span></b></tt> postpone evalutaion of argument expressions
+until they are demanded by a <tt><b><span style='font-family:Consolas'>first</span></b></tt>
+or <tt><b><span style='font-family:Consolas'>rest</span></b></tt> operation.
+You can use exactly the same suspension mechanism to support call-by-name and
+call-by-need lazy <tt><b><span style='font-family:Consolas'>cons</span></b></tt>
+that you might have used to support call-by-name and call-by-need bindings in
+the previous assignment. In this case, the suspensions are stored in a <tt><b><span
+style='font-family:Consolas'>cons</span></b></tt> structure rather than a
+binding structure the environment. An embedded suspension is not evaluated
+until it is &quot;probed&quot; by a <tt><b><span style='font-family:Consolas'>first</span></b></tt>
+or <tt><b><span style='font-family:Consolas'>rest</span></b></tt> operation.
+Call-by-name lazy evaluation re-evaluates suspensions every time that they are
+probed. Call-by-need lazy evaluation evaluates a given suspension only once and
+caches the resulting value in the data constructor (<tt><b><span
+style='font-family:Consolas'>cons</span></b></tt> cell in the case of Jam).</p>
+
+<p style='margin-left:0in'>Please change the function that converts Jam values
+to a string representation (<b><span style='font-family:Consolas'>toString</span></b>()
+and helpers) so that lists are still displayed as lists in the form <tt><b><span
+style='font-family:Consolas'>(1 2 3)</span></b></tt> as before, regardless of
+the cons mode used. You may want to abort processing lists longer than, say,
+1000 elements and have them displayed ending in <tt><b><span style='font-family:
+Consolas'>998 999 1000 ...)</span></b></tt>. However, we will not test this
+behavior. We will just require that lists up to 200 elements are displayed the
+same way as in the last assignment.</p>
+
+<p style='margin-left:0in'><b>Recursive Let</b> &nbsp; The recursive version of
+the <tt><b><span style='font-family:Consolas'>let</span></b></tt> construct
+introduces a collection of recursive bindings just as we discussed in class. We
+will not restrict the right hand sides of recursive <tt><b><span
+style='font-family:Consolas'>let</span></b></tt> constructions to maps because
+many useful recursive definitions in Jam with lazy cons violate this
+restriction. Hence, the implementation of recursive <tt><b><span
+style='font-family:Consolas'>let</span></b></tt> closely follows the
+implementation of the generalized version of <tt><b><span style='font-family:
+Consolas'>rec-let</span></b></tt> construct in LC. </p>
+
+<p style='margin-left:0in'>The only difference is that Jam recursive <tt><b><span
+style='font-family:Consolas'>let</span></b></tt> may introduce several mutually
+recursive definitions where the corresponding closures all close over the new environment.
+Since we want invalid forward references in a Jam program to produce a
+meaningful error message rather than diverging, we will use an explicit list to
+represent the environment of bindings and destructively update it to create the
+self-references. </p>
+
+<p style='margin-left:0in'>In a call-by-value application, we will initially
+bind each variable introduced in a <tt><b><span style='font-family:Consolas'>let</span></b></tt>
+to a special &quot;undefined&quot; value (e.g., Java <tt><b><span
+style='font-family:Consolas'>null</span></b></tt>) that is not a legal Jam
+value representation and will abort the computation if it is used as the input
+to any Jam operation. The interpreter evaluates the right-hand sides of the
+definitions in a recursive <tt><b><span style='font-family:Consolas'>let</span></b></tt>
+in left-to-right order and destructively modifies each new binding in the
+environment as soon as the right-hand side has been determined. </p>
+
+<p style='margin-left:0in'>In a call-by-name application, we bind each variable
+to a suspension (a closure of no arguments or <em><span style='font-family:
+"Arial",sans-serif'>thunk</span></em>) for each right-hand side. Since a
+suspension wraps the right hand side of each <tt><b><span style='font-family:
+Consolas'>let</span></b></tt> binding inside a lambda, the recursive
+environment can be constructed directly using a recursive binding construction
+(<tt><b><span style='font-family:Consolas'>letrec</span></b></tt> or <tt><b><span
+style='font-family:Consolas'>define</span></b></tt> in Scheme). No mutation is
+required in languages like Scheme and ML that support general recursive
+binding. In languages like Java that do not support general recursive binding,
+we use mutable binding cells instead. </p>
+
+<p style='margin-left:0in'>Note that the validity of definitions in a recursive
+<tt><b><span style='font-family:Consolas'>let</span></b></tt> depends on which
+semantics is used for Jam. Definitions that are valid for call-by-name or
+call-by-need lazy evaluation may be invalid in other evaluation modes. By this
+measure, lazy evaluation is better than conventional (&quot;eager&quot;)
+evaluation and call-by-name/call-by-need is better than call-by-value. </p>
+
+<p style='margin-left:0in'><b>Testing</b> &nbsp; You are expected to write unit
+tests for all of your non-trivial methods or functions <em><span
+style='font-family:"Arial",sans-serif'>and submit your test code as part of
+your program</span></em>. For more information, refer back to <a
+href="../../Assignments/1/index.html">Assignment 1</a>.</p>
+
+<p style='margin-left:0in'>In Assignment 2, the Interpreter supported three
+evaluation methods</p>
+
+<pre style='margin-left:.25in'><b><span style='font-family:Consolas'>callByValue()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>callByName()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>callByNeed()</span></b></pre>
+
+<p style='margin-left:0in'>In this assigment, the Interpreter class must
+support nine evaluation methods: </p>
+
+<pre style='margin-left:.25in'><b><span style='font-family:Consolas'>valueValue()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>nameValue()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>needValue()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>valueName()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>nameName()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>needName()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>valueNeed()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>nameNeed()</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>needNeed()</span></b></pre>
+
+<p style='margin-left:0in'>where the first word in the method name specifies
+the policy for evaluating program-defined procedure applications (Jam maps) and
+the second word specifies the policy for evaluating applications of the data
+constructor <tt><b><span style='font-family:Consolas'>cons</span></b></tt>.
+Hence the first three methods in the preceding list correspond to the three
+evaluation methods in Assignment 2.</p>
+
+<p style='margin-left:0in'>As in Assignment 2, the <tt><b><span
+style='font-family:Consolas'>Interpreter</span></b></tt> class must support two
+constructors: <tt><b><span style='font-family:Consolas'>Interpreter(String
+filename)</span></b></tt> which takes input from the specified file and <tt><b><span
+style='font-family:Consolas'>Interpreter(Reader inputStream)</span></b></tt> which
+takes input from the specified Reader. A given <tt><b><span style='font-family:
+Consolas'>Interpreter</span></b></tt> object should support the repeated
+invocation of any of the nine public evaluator methods. As a result, the same <tt><b><span
+style='font-family:Consolas'>Interpreter</span></b></tt> object can be used to
+test all forms of evaluation (as long as none of the evaluations diverges).</p>
+
+<p style='margin-left:0in'>In summary, you must support the following API:</p>
+
+<pre style='margin-left:.25in'><b><span style='font-family:Consolas'>/** file Interpreter.java **/</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>class EvalException extends RuntimeException {</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>    EvalException(String msg) { super(msg); }</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>}</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'> </span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>class SyntaxException extends RuntimeException {</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>    SyntaxException(String msg) { super(msg); }</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>}</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'> </span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>class Interpreter {</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   Interpreter(String fileName) throws IOException;</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   Interpreter(Reader reader);</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   </span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal valueValue();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal nameValue();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal needValue();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   </span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal valueName();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal nameName();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal needName();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   </span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal valueNeed();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal nameNeed();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>   public JamVal needNeed();</span></b></pre><pre
+style='margin-left:.25in'><b><span style='font-family:Consolas'>}</span></b></pre>
+
+<h2>General Implementation Issues</h2>
+
+<p style='margin-left:0in'>To produce intelligible output for computations
+involving lazy <tt><b><span style='font-family:Consolas'>cons</span></b></tt>,
+your interpreter must force the complete evaluation of the answer up to a large
+depth bound (which is a constant in your program) but abandon evaluation after
+reaching this depth to avoid non-termination.  An easy solution is define the <b><span
+style='font-family:Consolas'>toString()</span></b> operation in <b><span
+style='font-family:Consolas'>JamCons</span></b><b><span style='font-family:
+Consolas'> </span></b>to generate depth-bounded output.  The provided base code
+(a subset of the class solution) already does this with a depth bound of 1000. 
+So even output of lists in call-by-value interpretation is bounded by this
+depth limit.  None of our test cases involves printing lists longer than this
+depth bound.      </p>
+
+<p style='margin-left:0in'>If a computation produces an infinite answer, the
+large bound on forcing depth prevents the forced computation from running
+“forever” (until the provided computational resources are exhausted). An interactive
+user interface that allowed the user to request the expansion of an unevaluated
+node (to some depth) in an answer would be more satisfactory, but building such
+an interface is beyond the scope of a routine programming assignment.</p>
+
+<h2>Testing and Submitting Your Program</h2>
+
+<p style='margin-left:0in'>The <b><span style='font-family:Consolas'>src</span></b>
+folder in the provided code base includes some Junit4 test classes which are
+not comprehensive.  Make sure that your program passes the sample unit tests in
+<b><span style='font-family:Consolas'>Assign1Test.java</span></b> and <b><span
+style='font-family:Consolas'>Assign2Test.java</span></b>.  You need to add more
+test cases; you need to test the interpretation of each basic form of program <b><span
+style='font-family:Consolas'>AST</span></b>, every inductive <b><span
+style='font-family:Consolas'>AST</span></b> construction and some more complex
+composite programs involving both lists and integers.</p>
+
+<p style='margin-left:0in'>Each class and method in your program should be
+preceded by a short&nbsp;<span style='font-size:14.0pt;font-family:Consolas'>javadoc</span>&nbsp;comment
+stating precisely what it does.</p>
+
+<p style='margin-left:0in'>Edit the <tt><b><span style='font-family:Consolas'>README</span></b></tt>
+file for your repository so that it</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>outlines the organization of your program, </p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>specifies any compatible additions that you made the provided API
+(not generally necessary), and</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>specifes what testing process you used to confirm the correctness
+of your program.</p>
+
+<p class=MsoNormal>Note that the <b><span style='font-family:Consolas'>README</span></b>
+file is a GitHub “MarkDown” file, text augmented by a few simple formatting
+annotations.  MarkDown (MD) is much less powerful than HTML but much easier to
+use.  The webpage <b><a
+href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-cheat-sheet</a></b>
+is a good summary for learning MarkDown and a useful reference.</p>
+
+<p class=MsoNormal style='background:white'>Since your program resides in a
+repository owned by our classroom, you do not need to do anything to submit
+except push you the latest version of your local repository back to the origin
+on GitHub.</p>
+
+<p class=MsoNormal style='background:white'>Your test suite should ideally test
+every feasible control path in your code.&nbsp;&nbsp;Actual code often contains
+unreachable error reports.&nbsp;&nbsp;Such control paths obviously cannot be
+traversed by any test case.&nbsp;&nbsp;We expect you to come very close to
+ideal coverage.</p>
+
+<p style='margin-left:0in'>Please make sure to remove or disable all debugging
+output generated by program. Excessive use of print statements considerably
+slows your interpreter and thus testing your project down. Our grading script
+imposes a generous time limit on running the grading test suite; if your
+program is very inefficient, you may not get credit for the test cases that
+take too long.  </p>
+
+<div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
