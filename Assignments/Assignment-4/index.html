@@ -1,1009 +1,137 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
-xmlns="http://www.w3.org/TR/REC-html40">
+<html>
 
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 15">
-<meta name=Originator content="Microsoft Word 15">
-<link rel=File-List href="index_files/filelist.xml">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
 <title>COMP 411 Principles of Programming Languages</title>
-<!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Robert Cartwright</o:Author>
-  <o:Template>Normal</o:Template>
-  <o:LastAuthor>Robert Cartwright</o:LastAuthor>
-  <o:Revision>5</o:Revision>
-  <o:TotalTime>187</o:TotalTime>
-  <o:Created>2022-02-22T06:05:00Z</o:Created>
-  <o:LastSaved>2023-02-21T13:02:00Z</o:LastSaved>
-  <o:Pages>1</o:Pages>
-  <o:Words>1629</o:Words>
-  <o:Characters>8142</o:Characters>
-  <o:Lines>67</o:Lines>
-  <o:Paragraphs>19</o:Paragraphs>
-  <o:CharactersWithSpaces>9752</o:CharactersWithSpaces>
-  <o:Version>15.00</o:Version>
- </o:DocumentProperties>
- <o:OfficeDocumentSettings>
-  <o:AllowPNG/>
- </o:OfficeDocumentSettings>
-</xml><![endif]-->
-<link rel=themeData href="index_files/themedata.thmx">
-<link rel=colorSchemeMapping href="index_files/colorschememapping.xml">
-<!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:SpellingState>Clean</w:SpellingState>
-  <w:GrammarState>Clean</w:GrammarState>
-  <w:TrackMoves/>
-  <w:TrackFormatting/>
-  <w:ValidateAgainstSchemas/>
-  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
-  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
-  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
-  <w:DoNotPromoteQF/>
-  <w:LidThemeOther>EN-US</w:LidThemeOther>
-  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
-  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
-  <w:Compatibility>
-   <w:BreakWrappedTables/>
-   <w:SplitPgBreakAndParaMark/>
-  </w:Compatibility>
-  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
-  <m:mathPr>
-   <m:mathFont m:val="Cambria Math"/>
-   <m:brkBin m:val="before"/>
-   <m:brkBinSub m:val="&#45;-"/>
-   <m:smallFrac m:val="off"/>
-   <m:dispDef/>
-   <m:lMargin m:val="0"/>
-   <m:rMargin m:val="0"/>
-   <m:defJc m:val="centerGroup"/>
-   <m:wrapIndent m:val="1440"/>
-   <m:intLim m:val="subSup"/>
-   <m:naryLim m:val="undOvr"/>
-  </m:mathPr></w:WordDocument>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
-  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
-  LatentStyleCount="371">
-  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 6"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 7"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 8"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index 9"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 1"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 2"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 3"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 4"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 5"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 6"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 7"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 8"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" Name="toc 9"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Normal Indent"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="footnote text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="annotation text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="header"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="footer"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="index heading"/>
-  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="table of figures"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="envelope address"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="envelope return"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="footnote reference"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="annotation reference"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="line number"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="page number"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="endnote reference"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="endnote text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="table of authorities"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="macro"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="toa heading"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Bullet 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Number 5"/>
-  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Closing"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Signature"/>
-  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
-   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text Indent"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="List Continue 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Message Header"/>
-  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Salutation"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Date"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text First Indent"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text First Indent 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Note Heading"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text Indent 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Body Text Indent 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Block Text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Hyperlink"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="FollowedHyperlink"/>
-  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
-  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Document Map"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Plain Text"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="E-mail Signature"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Top of Form"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Bottom of Form"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Normal (Web)"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Acronym"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Address"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Cite"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Code"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Definition"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Keyboard"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Preformatted"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Sample"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Typewriter"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="HTML Variable"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Normal Table"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="annotation subject"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="No List"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Outline List 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Outline List 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Outline List 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Simple 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Simple 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Simple 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Classic 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Colorful 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Colorful 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Colorful 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Columns 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 6"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 7"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Grid 8"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 4"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 5"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 6"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 7"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table List 8"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table 3D effects 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table 3D effects 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table 3D effects 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Contemporary"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Elegant"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Professional"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Subtle 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Subtle 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Web 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Web 2"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Web 3"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Balloon Text"/>
-  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
-  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
-   Name="Table Theme"/>
-  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
-  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
-  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
-  <w:LsdException Locked="false" Priority="34" QFormat="true"
-   Name="List Paragraph"/>
-  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
-  <w:LsdException Locked="false" Priority="30" QFormat="true"
-   Name="Intense Quote"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
-  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
-  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
-  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="19" QFormat="true"
-   Name="Subtle Emphasis"/>
-  <w:LsdException Locked="false" Priority="21" QFormat="true"
-   Name="Intense Emphasis"/>
-  <w:LsdException Locked="false" Priority="31" QFormat="true"
-   Name="Subtle Reference"/>
-  <w:LsdException Locked="false" Priority="32" QFormat="true"
-   Name="Intense Reference"/>
-  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
-  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
-   UnhideWhenUsed="true" Name="Bibliography"/>
-  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
-   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
-  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
-  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
-  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
-  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
-  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
-  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
-  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
-  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
-  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 1"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 2"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 3"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 4"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 5"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="Grid Table 1 Light Accent 6"/>
-  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
-  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="Grid Table 6 Colorful Accent 6"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="Grid Table 7 Colorful Accent 6"/>
-  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
-  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
-  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 1"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 1"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 2"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 2"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 3"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 3"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 4"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 4"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 5"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 5"/>
-  <w:LsdException Locked="false" Priority="46"
-   Name="List Table 1 Light Accent 6"/>
-  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
-  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
-  <w:LsdException Locked="false" Priority="51"
-   Name="List Table 6 Colorful Accent 6"/>
-  <w:LsdException Locked="false" Priority="52"
-   Name="List Table 7 Colorful Accent 6"/>
- </w:LatentStyles>
-</xml><![endif]-->
 <style>
 <!--
  /* Font Definitions */
  @font-face
 	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:2;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
 	{font-family:Consolas;
-	panose-1:2 11 6 9 2 2 4 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:modern;
-	mso-font-pitch:fixed;
-	mso-font-signature:-536869121 64767 1 0 415 0;}
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin:0in;
+	{margin:0in;
 	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
 	color:black;}
 h2
-	{mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-link:"Heading 2 Char";
-	mso-margin-top-alt:auto;
+	{mso-style-link:"Heading 2 Char";
 	margin-right:0in;
-	mso-margin-bottom-alt:auto;
 	margin-left:0in;
-	mso-pagination:widow-orphan;
-	mso-outline-level:2;
 	font-size:18.0pt;
 	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;
 	color:black;
 	font-weight:bold;}
 h3
-	{mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-link:"Heading 3 Char";
-	mso-margin-top-alt:auto;
+	{mso-style-link:"Heading 3 Char";
 	margin-right:0in;
-	mso-margin-bottom-alt:auto;
 	margin-left:0in;
-	mso-pagination:widow-orphan;
-	mso-outline-level:3;
 	font-size:13.5pt;
 	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;
 	color:windowtext;
 	font-weight:bold;}
 p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:"Body Text Indent Char";
+	{mso-style-link:"Body Text Indent Char";
 	margin-top:0in;
 	margin-right:0in;
 	margin-bottom:0in;
 	margin-left:.5in;
 	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
 	color:black;}
 a:link, span.MsoHyperlink
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	color:#0000EE;
-	text-decoration:underline;
-	text-underline:single;}
+	{color:#0000EE;
+	text-decoration:underline;}
 a:visited, span.MsoHyperlinkFollowed
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	color:#551A8B;
-	text-decoration:underline;
-	text-underline:single;}
+	{color:#551A8B;
+	text-decoration:underline;}
 p
-	{mso-style-priority:99;
-	mso-margin-top-alt:auto;
-	margin-right:0in;
-	mso-margin-bottom-alt:auto;
+	{margin-right:0in;
 	margin-left:.5in;
-	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
 	color:black;}
 pre
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:"HTML Preformatted Char";
+	{mso-style-link:"HTML Preformatted Char";
 	margin-top:0in;
 	margin-right:0in;
 	margin-bottom:0in;
 	margin-left:.5in;
 	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
 	font-size:12.0pt;
 	font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;
 	color:windowtext;}
 tt
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	font-family:"Courier New";
-	mso-ascii-font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:minor-fareast;
-	mso-hansi-font-family:"Courier New";
-	mso-bidi-font-family:"Courier New";}
+	{font-family:"Courier New";}
 span.Heading2Char
 	{mso-style-name:"Heading 2 Char";
-	mso-style-noshow:yes;
-	mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
 	mso-style-link:"Heading 2";
-	mso-ansi-font-size:13.0pt;
-	mso-bidi-font-size:13.0pt;
 	font-family:"Calibri Light",sans-serif;
-	mso-ascii-font-family:"Calibri Light";
-	mso-ascii-theme-font:major-latin;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:major-fareast;
-	mso-hansi-font-family:"Calibri Light";
-	mso-hansi-theme-font:major-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:major-bidi;
-	color:#2E74B5;
-	mso-themecolor:accent1;
-	mso-themeshade:191;}
+	color:#2E74B5;}
 span.Heading3Char
 	{mso-style-name:"Heading 3 Char";
-	mso-style-noshow:yes;
-	mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
 	mso-style-link:"Heading 3";
-	mso-ansi-font-size:12.0pt;
-	mso-bidi-font-size:12.0pt;
 	font-family:"Calibri Light",sans-serif;
-	mso-ascii-font-family:"Calibri Light";
-	mso-ascii-theme-font:major-latin;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:major-fareast;
-	mso-hansi-font-family:"Calibri Light";
-	mso-hansi-theme-font:major-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:major-bidi;
-	color:#1F4D78;
-	mso-themecolor:accent1;
-	mso-themeshade:127;}
+	color:#1F4D78;}
 span.HTMLPreformattedChar
 	{mso-style-name:"HTML Preformatted Char";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
 	mso-style-link:"HTML Preformatted";
 	font-family:Consolas;
-	mso-ascii-font-family:Consolas;
-	mso-hansi-font-family:Consolas;
-	mso-bidi-font-family:Arial;
 	color:black;}
 span.BodyTextIndentChar
 	{mso-style-name:"Body Text Indent Char";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
 	mso-style-link:"Body Text Indent";
-	mso-ansi-font-size:12.0pt;
-	mso-bidi-font-size:12.0pt;
 	font-family:"Arial",sans-serif;
-	mso-ascii-font-family:Arial;
-	mso-hansi-font-family:Arial;
-	mso-bidi-font-family:Arial;
 	color:black;}
 p.class1, li.class1, div.class1
 	{mso-style-name:class1;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-margin-top-alt:auto;
 	margin-right:0in;
-	mso-margin-bottom-alt:auto;
 	margin-left:.5in;
-	mso-pagination:widow-orphan;
 	font-size:12.0pt;
 	font-family:"Arial",sans-serif;
-	mso-fareast-font-family:"Times New Roman";
 	color:black;}
 span.m
-	{mso-style-name:m;
-	mso-style-unhide:no;}
-span.SpellE
-	{mso-style-name:"";
-	mso-spl-e:yes;}
-span.GramE
-	{mso-style-name:"";
-	mso-gram-e:yes;}
+	{mso-style-name:m;}
 .MsoChpDefault
-	{mso-style-type:export-only;
-	mso-default-props:yes;
-	font-size:10.0pt;
-	mso-ansi-font-size:10.0pt;
-	mso-bidi-font-size:10.0pt;}
+	{font-size:10.0pt;}
 @page WordSection1
 	{size:8.5in 11.0in;
-	margin:1.0in 1.25in 1.0in 1.25in;
-	mso-header-margin:.5in;
-	mso-footer-margin:.5in;
-	mso-paper-source:0;}
+	margin:1.0in 1.25in 1.0in 1.25in;}
 div.WordSection1
 	{page:WordSection1;}
  /* List Definitions */
- @list l0
-	{mso-list-id:970205115;
-	mso-list-template-ids:-1300824304;}
-@list l0:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:1.25in;
-	mso-level-number-position:left;
-	margin-left:1.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Symbol;}
-@list l0:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:1.75in;
-	mso-level-number-position:left;
-	margin-left:1.75in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:"Courier New";
-	mso-bidi-font-family:"Times New Roman";}
-@list l0:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:2.25in;
-	mso-level-number-position:left;
-	margin-left:2.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
-@list l0:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:2.75in;
-	mso-level-number-position:left;
-	margin-left:2.75in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
-@list l0:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:3.25in;
-	mso-level-number-position:left;
-	margin-left:3.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
-@list l0:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:3.75in;
-	mso-level-number-position:left;
-	margin-left:3.75in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
-@list l0:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:4.25in;
-	mso-level-number-position:left;
-	margin-left:4.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
-@list l0:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:4.75in;
-	mso-level-number-position:left;
-	margin-left:4.75in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
-@list l0:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:5.25in;
-	mso-level-number-position:left;
-	margin-left:5.25in;
-	text-indent:-.25in;
-	mso-ansi-font-size:10.0pt;
-	font-family:Wingdings;}
-ol
+ ol
 	{margin-bottom:0in;}
 ul
 	{margin-bottom:0in;}
 -->
 </style>
-<!--[if gte mso 10]>
-<style>
- /* Style Definitions */
- table.MsoNormalTable
-	{mso-style-name:"Table Normal";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-parent:"";
-	mso-padding-alt:0in 5.4pt 0in 5.4pt;
-	mso-para-margin:0in;
-	mso-para-margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:10.0pt;
-	font-family:"Times New Roman",serif;}
-</style>
-<![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="1026"/>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <o:shapelayout v:ext="edit">
-  <o:idmap v:ext="edit" data="1"/>
- </o:shapelayout></xml><![endif]-->
+
 </head>
 
-<body bgcolor=white lang=EN-US link="#0000EE" vlink="#551A8B" style='tab-interval:
-.5in' alink="#ff0000">
+<body bgcolor=white lang=EN-US link="#0000EE" vlink="#551A8B" alink="#ff0000">
 
 <div class=WordSection1>
 
-<p class=MsoNormal>&nbsp; <u1:p></u1:p><o:p></o:p></p>
+<p class=MsoNormal>&nbsp; <u1:p></u1:p></p>
 
 <table class=MsoNormalTable border=0 cellspacing=3 cellpadding=0 width="100%"
- style='width:100.0%;mso-cellspacing:1.5pt;mso-yfti-tbllook:1184;mso-padding-alt:
- 0in 0in 0in 0in' nosave="">
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+ style='width:100.0%' nosave="">
+ <tr>
   <td style='padding:.75pt .75pt .75pt .75pt'>
-  <p class=class1><b><span style='font-size:48.0pt;mso-bidi-font-size:36.0pt;
-  color:#3366FF'>Programming Assignment 4:<br>
-  Imperative Jam</span></b><span style='font-size:14.0pt;mso-bidi-font-size:
-  12.0pt'> </span></p>
+  <p class=class1><b><span style='font-size:48.0pt;color:#3366FF'>Programming
+  Assignment 4:<br>
+  Imperative Jam</span></b><span style='font-size:14.0pt'> </span></p>
   </td>
   <td style='padding:.75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>&nbsp;</p>
@@ -1011,10 +139,9 @@ ul
  </tr>
 </table>
 
-<h2><span style='font-size:20.0pt;mso-bidi-font-size:18.0pt;mso-fareast-font-family:
-"Times New Roman"'>Points: 100<o:p></o:p></span></h2>
+<h2><span style='font-size:20.0pt'>Points: 100</span></h2>
 
-<h2 style='background:white'>Provided Code<o:p></o:p></h2>
+<h2 style='background:white'>Provided Code</h2>
 
 <u1:p></u1:p>
 
@@ -1024,466 +151,294 @@ text-decoration-thickness: initial;text-decoration-style: initial;text-decoratio
 word-spacing:0px'><span style='font-size:13.5pt'>The class solution to Project
 3 appears in the support code for Project 4 on GitHub Classroom in a folder
 named&nbsp;</span><b><span style='font-size:13.5pt;font-family:Consolas'>Solution
-to Project 3</span></b><span style='font-size:13.5pt'>.<span
-style='mso-spacerun:yes'>  </span>The provided code in the folder </span><span
-class=SpellE><b style='mso-bidi-font-weight:normal'><span style='font-size:
-13.5pt;font-family:Consolas'>src</span></b></span><span style='font-size:13.5pt'>
-consists of a sample Junit test file </span><b style='mso-bidi-font-weight:
-normal'><span style='font-size:13.5pt;font-family:Consolas'>Assign4Test.java</span></b><span
-style='font-size:13.5pt'> for Assignment 4.<span style='mso-spacerun:yes'> 
-</span>In contrast to earlier assignments, the provided code only includes a
-test file.<span style='mso-spacerun:yes'>  </span>In this assignment, you must
-extend and revise a solution to Project 3 (either the class solution or your
-own) to support the additional Jam constructs.<span style='mso-spacerun:yes'> 
-</span>The tests in provided test file exercise these extensions. <span
-style='mso-spacerun:yes'> </span>Your project submission should have the same
-layout as </span><b><span style='font-size:13.5pt;font-family:Consolas'>Solution
-to Project 3</span></b><span style='font-size:13.5pt;mso-bidi-font-weight:bold'>
-with the addition of </span><b style='mso-bidi-font-weight:normal'><span
+to Project 3</span></b><span style='font-size:13.5pt'>.  The provided code in
+the folder </span><b><span style='font-size:13.5pt;font-family:Consolas'>src</span></b><span
+style='font-size:13.5pt'> consists of a sample Junit test file </span><b><span
 style='font-size:13.5pt;font-family:Consolas'>Assign4Test.java</span></b><span
-style='font-size:13.5pt;mso-bidi-font-weight:bold'> and your test files for
-Assignment 4.<span style='mso-spacerun:yes'>  </span>You may include the test
-files from</span><b><span style='font-size:13.5pt;font-family:Consolas'> Solution
-to Project 3</span></b><span style='font-size:13.5pt;mso-bidi-font-weight:bold'>
-in your submission.<span style='mso-spacerun:yes'>  </span>Recall that the
-names of your files do not matter except for the fact that you test file names
-have the form </span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:13.5pt'> for Assignment 4.  In contrast to earlier
+assignments, the provided code only includes a test file.  In this assignment,
+you must extend and revise a solution to Project 3 (either the class solution
+or your own) to support the additional Jam constructs.  The tests in provided
+test file exercise these extensions.  Your project submission should have the
+same layout as </span><b><span style='font-size:13.5pt;font-family:Consolas'>Solution
+to Project 3</span></b><span style='font-size:13.5pt'> with the addition of </span><b><span
+style='font-size:13.5pt;font-family:Consolas'>Assign4Test.java</span></b><span
+style='font-size:13.5pt'> and your test files for Assignment 4.  You may
+include the test files from</span><b><span style='font-size:13.5pt;font-family:
+Consolas'> Solution to Project 3</span></b><span style='font-size:13.5pt'> in
+your submission.  Recall that the names of your files do not matter except for
+the fact that you test file names have the form </span><b><span
 style='font-size:13.5pt;font-family:Consolas'>*Test.java</span></b><span
-style='font-size:13.5pt'> (implying that the corresponding </span><b
-style='mso-bidi-font-weight:normal'><span style='font-size:13.5pt;font-family:
-Consolas'>public</span></b><span style='font-size:13.5pt'> classes have names
-of the form </span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:13.5pt'> (implying that the corresponding </span><b><span
+style='font-size:13.5pt;font-family:Consolas'>public</span></b><span
+style='font-size:13.5pt'> classes have names of the form </span><b><span
 style='font-size:13.5pt;font-family:Consolas'>*Test</span></b><span
-style='font-size:13.5pt'>) so that our grading script finds them.<span
-style='mso-spacerun:yes'>  </span>Our grading script expects the classes
-created by compiling the files in your submitted </span><span class=SpellE><b
-style='mso-bidi-font-weight:normal'><span style='font-size:13.5pt;font-family:
-Consolas'>src</span></b></span><span style='font-size:13.5pt'> directory to be classes
-in the empty package supporting the program API required by the sample test
-file </span><b style='mso-bidi-font-weight:normal'><span style='font-size:13.5pt;
-font-family:Consolas'>Assign4Test.java</span></b><span style='font-size:13.5pt;
-mso-bidi-font-weight:bold'>.<span style='mso-spacerun:yes'>  </span>When
-compiled your program should pass the tests in this sample test file.<span
-style='mso-spacerun:yes'>  </span></span><span style='font-size:13.5pt'><o:p></o:p></span></p>
+style='font-size:13.5pt'>) so that our grading script finds them.  Our grading
+script expects the classes created by compiling the files in your submitted </span><b><span
+style='font-size:13.5pt;font-family:Consolas'>src</span></b><span
+style='font-size:13.5pt'> directory to be classes in the empty package
+supporting the program API required by the sample test file </span><b><span
+style='font-size:13.5pt;font-family:Consolas'>Assign4Test.java</span></b><span
+style='font-size:13.5pt'>.  When compiled your program should pass the tests in
+this sample test file.  </span></p>
 
-<h3><span style='font-size:18.0pt;mso-fareast-font-family:"Times New Roman"'>Description<o:p></o:p></span></h3>
+<h3><span style='font-size:18.0pt'>Description</span></h3>
 
 <p><b><span style='font-size:14.0pt'>Task</span></b><span style='font-size:
-14.0pt'> &nbsp; <o:p></o:p></span></p>
+14.0pt'> &nbsp; </span></p>
 
 <p>Your task is to extend and modify the nine interpreters from Project 3
 (using either your solution or the provided class solution for Project 3) to
 support imperative programming by adding ML-style reference cells and blocks.
 In particular, you will augment the Jam dialect from Assignment 3 with the
-unary operators <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>ref</span></b></tt> <span
-class=GramE>and <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>!</span></b></tt></span>,
-the binary assignment operator <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>&lt;-</span></b></tt>,
+unary operators <tt><b><span style='font-family:Consolas'>ref</span></b></tt>
+and <tt><b><span style='font-family:Consolas'>!</span></b></tt>, the binary
+assignment operator <tt><b><span style='font-family:Consolas'>&lt;-</span></b></tt>,
 and blocks consisting of non-empty sequences of expressions enclosed in braces
-(<tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>{</span></b></tt> and <tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>}</span></b></tt>)
-and separated by semicolons (the final expression in the sequence does NOT have
-a semicolon following it). In other words, you need to support the following additions
-to <span class=GramE>Jam</span> syntax:</p>
+(<tt><b><span style='font-family:Consolas'>{</span></b></tt> and <tt><b><span
+style='font-family:Consolas'>}</span></b></tt>) and separated by semicolons
+(the final expression in the sequence does NOT have a semicolon following it).
+In other words, you need to support the following additions to Jam syntax:</p>
 
-<pre style='margin-left:45.8pt'><span class=SpellE><span class=GramE><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>Exp</span></b></span></span><span
-class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'><span style='mso-spacerun:yes'>           </span>::</span></b></span><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>= ... | Block<o:p></o:p></span></b></pre><pre
-style='margin-left:45.8pt'><span class=GramE><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>Block<span style='mso-spacerun:yes'>         </span>::</span></b></span><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>= '{' <span
-class=SpellE>PropStmtList</span> '}'<o:p></o:p></span></b></pre><pre
-style='margin-left:45.8pt'><span class=SpellE><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>PropStmtList</span></b></span><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'><span style='mso-spacerun:yes'>  </span>::= <span
-class=SpellE>Exp</span> { ; Exp}*<o:p></o:p></span></b></pre><pre
-style='margin-left:45.8pt'><span class=SpellE><span class=GramE><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>Unop</span></b></span></span><span
-class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'><span style='mso-spacerun:yes'>          </span>::</span></b></span><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>= ... | ref | !<o:p></o:p></span></b></pre><pre
-style='margin-left:45.8pt'><span class=SpellE><span class=GramE><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>Binop</span></b></span></span><span
-class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'><span style='mso-spacerun:yes'>         </span>::</span></b></span><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>= ... | &lt;-<o:p></o:p></span></b></pre><pre
-style='margin-left:45.8pt'><span class=GramE><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>Prim<span style='mso-spacerun:yes'>          </span>::</span></b></span><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>= ... | ref?<o:p></o:p></span></b></pre>
+<pre style='margin-left:45.8pt'><b><span style='font-family:Consolas'>Exp           ::= ... | Block</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-family:Consolas'>Block         ::= '{' PropStmtList '}'</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-family:Consolas'>PropStmtList  ::= Exp { ; Exp}*</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-family:Consolas'>Unop          ::= ... | ref | !</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-family:Consolas'>Binop         ::= ... | &lt;-</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-family:Consolas'>Prim          ::= ... | ref?</span></b></pre>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Note
-that a <span class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>PropStmtList</span></b></tt></span>
-is identical to a <span class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>PropExpList</span></b></tt></span>
-except for the separator <span class=GramE>symbol <tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>;</span></b></tt></span>
-instead of <tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>,</span></b></tt>. You may want to exploit the
-commonality in your parser. We will use sometimes use the word “statement&quot;
-instead of &quot;expression&quot; to refer to Jam expressions because with the
-addition of mutable cells, evaluating an expression can modify program state
-(the contents of mutable cells). From a strictly syntactic viewpoint, there is
-no difference between statements and expressions. But we still try to use the
-term <i>statement</i> to refer to an expression where mutation is common and
-the term expression (more accurately <i>pure</i> expression) where no mutation
-is avoided in well-written code. </p>
+<p>Note that a <tt><b><span style='font-family:Consolas'>PropStmtList</span></b></tt>
+is identical to a <tt><b><span style='font-family:Consolas'>PropExpList</span></b></tt>
+except for the separator symbol <tt><b><span style='font-family:Consolas'>;</span></b></tt>
+instead of <tt><b><span style='font-family:Consolas'>,</span></b></tt>. You may
+want to exploit the commonality in your parser. We will use sometimes use the
+word “statement&quot; instead of &quot;expression&quot; to refer to Jam
+expressions because with the addition of mutable cells, evaluating an
+expression can modify program state (the contents of mutable cells). From a
+strictly syntactic viewpoint, there is no difference between statements and
+expressions. But we still try to use the term <i>statement</i> to refer to an
+expression where mutation is common and the term expression (more accurately <i>pure</i>
+expression) where no mutation is avoided in well-written code. </p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>You
-must modify your <span class=SpellE>lexer</span> and parser to accept <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>Block</span></b></tt>s as well as the new unary operators
-<tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>ref</span></b></tt> <span class=GramE>and <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>!</span></b></tt></span><tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>, </span></b></tt>the
-new binary operator <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>&lt;-</span></b></tt>,
-and the new primitive function <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>ref?</span></b></tt>.
-The supporting code for this assignment includes a class solution to Assignment
-3. </p>
+<p>You must modify your lexer and parser to accept <tt><b><span
+style='font-family:Consolas'>Block</span></b></tt>s as well as the new unary
+operators <tt><b><span style='font-family:Consolas'>ref</span></b></tt> and <tt><b><span
+style='font-family:Consolas'>!, </span></b></tt>the new binary operator <tt><b><span
+style='font-family:Consolas'>&lt;-</span></b></tt>, and the new primitive
+function <tt><b><span style='font-family:Consolas'>ref?</span></b></tt>. The
+supporting code for this assignment includes a class solution to Assignment 3. </p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
-style='font-size:14.0pt;font-family:"Arial",sans-serif'>Adding ref cells and
-assignment</span></strong><span style='font-size:14.0pt'> <o:p></o:p></span></p>
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Adding
+ref cells and assignment</span></strong><span style='font-size:14.0pt'> </span></p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>The
-unary operation <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>ref E</span></b></tt>
-evaluates the expression <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>E</span></b></tt> to
-produce an arbitrary value <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>V</span></b></tt>,
-creates a new box <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>b</span></b></tt>
-holding <tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>V</span></b></tt> and returns the box <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>b</span></b></tt>.</p>
+<p>The unary operation <tt><b><span style='font-family:Consolas'>ref E</span></b></tt>
+evaluates the expression <tt><b><span style='font-family:Consolas'>E</span></b></tt>
+to produce an arbitrary value <tt><b><span style='font-family:Consolas'>V</span></b></tt>,
+creates a new box <tt><b><span style='font-family:Consolas'>b</span></b></tt>
+holding <tt><b><span style='font-family:Consolas'>V</span></b></tt> and returns
+the box <tt><b><span style='font-family:Consolas'>b</span></b></tt>.</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>The
-unary <span class=GramE>operation <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>!</span></b></tt></span><tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'> E</span></b></tt> evaluates the expression <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>E</span></b></tt> to produce a value which must be a box
-and returns the contents of the box. If the value of <tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>E</span></b></tt>
-is not a box, the interpreter generates a run-time error (<span class=SpellE><tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>EvalException</span></b></tt></span>).</p>
+<p>The unary operation <tt><b><span style='font-family:Consolas'>! E</span></b></tt>
+evaluates the expression <tt><b><span style='font-family:Consolas'>E</span></b></tt>
+to produce a value which must be a box and returns the contents of the box. If
+the value of <tt><b><span style='font-family:Consolas'>E</span></b></tt> is not
+a box, the interpreter generates a run-time error (<tt><b><span
+style='font-family:Consolas'>EvalException</span></b></tt>).</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>The
-binary operation <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>E1 &lt;- E2</span></b></tt>
-evaluates the expression <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>E1</span></b></tt> to
-produce a value <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>V1</span></b></tt> that
-must be a box, evaluates <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>E2</span></b></tt> to
-produce an arbitrary value <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>V2</span></b></tt>,
-stores <tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>V2</span></b></tt> in box <tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>V1</span></b></tt>,
-and returns the special value <span class=SpellE><tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>JamUnit</span></b></tt></span>
-(which is a <em><span style='font-family:"Arial",sans-serif'>legal Jam value</span></em>
-that is rejected by most primitive operations as an invalid input). <span
-class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>JamUnit</span></b></tt></span> can <span
-class=SpellE>can</span> conveniently be represented as singleton subclass of <span
-class=SpellE><b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'>JamVal</span></b></span>. If you follow this recommendation, you will
-need to modify the <span class=SpellE><b style='mso-bidi-font-weight:normal'><span
-style='font-family:Consolas'>JamValVisitor</span></b></span> interface to
-include a <span class=SpellE><b style='mso-bidi-font-weight:normal'><span
-style='font-family:Consolas'>forXXXX</span></b></span> method for <span
-class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>JamUnit</span></b></tt></span>.<span
-style='mso-spacerun:yes'>  </span>(The <span class=SpellE><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>JamValVisitor</span></b></span>
-interface is not currently used in the class solution to Project 4 but it
-important infrastructure code should <span class=GramE>we</span> every want to
-define an operation on the type <span class=SpellE><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>JamVal</span></b></span>.) We
-recommend that you use a different representation for the dummy binding value
-in a recursive <b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'>let</span></b>; since attempting to access this dummy value is a
-run-time error, the representation of this dummy value does not need to be a <span
-class=SpellE><b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'>JamVal</span></b></span>. The <b style='mso-bidi-font-weight:normal'><span
+<p>The binary operation <tt><b><span style='font-family:Consolas'>E1 &lt;- E2</span></b></tt>
+evaluates the expression <tt><b><span style='font-family:Consolas'>E1</span></b></tt>
+to produce a value <tt><b><span style='font-family:Consolas'>V1</span></b></tt>
+that must be a box, evaluates <tt><b><span style='font-family:Consolas'>E2</span></b></tt>
+to produce an arbitrary value <tt><b><span style='font-family:Consolas'>V2</span></b></tt>,
+stores <tt><b><span style='font-family:Consolas'>V2</span></b></tt> in box <tt><b><span
+style='font-family:Consolas'>V1</span></b></tt>, and returns the special value <tt><b><span
+style='font-family:Consolas'>JamUnit</span></b></tt> (which is a <em><span
+style='font-family:"Arial",sans-serif'>legal Jam value</span></em> that is
+rejected by most primitive operations as an invalid input). <tt><b><span
+style='font-family:Consolas'>JamUnit</span></b></tt> can can conveniently be
+represented as singleton subclass of <b><span style='font-family:Consolas'>JamVal</span></b>.
+If you follow this recommendation, you will need to modify the <b><span
+style='font-family:Consolas'>JamValVisitor</span></b> interface to include a <b><span
+style='font-family:Consolas'>forXXXX</span></b> method for <tt><b><span
+style='font-family:Consolas'>JamUnit</span></b></tt>.  (The <b><span
+style='font-family:Consolas'>JamValVisitor</span></b> interface is not
+currently used in the class solution to Project 4 but it important
+infrastructure code should we every want to define an operation on the type <b><span
+style='font-family:Consolas'>JamVal</span></b>.) We recommend that you use a
+different representation for the dummy binding value in a recursive <b><span
+style='font-family:Consolas'>let</span></b>; since attempting to access this
+dummy value is a run-time error, the representation of this dummy value does
+not need to be a <b><span style='font-family:Consolas'>JamVal</span></b>. The <b><span
 style='font-family:Consolas'>null</span></b> pointer in Java can be used to
 represent the dummy bound value in the implementation of recursive <span
 style='font-family:Consolas'>let</span>; you can also introduce a special
-object (as long as it is not a <span class=SpellE><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>JamVal</span></b></span>) for this
-purpose<span style='mso-spacerun:yes'>   </span>The special value <span
-class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>JamUnit</span></b></tt></span> can bound to a
-variable, returned by a <span style='font-family:Consolas'>map</span>, and
-appear as an expression ins a block.<span style='mso-spacerun:yes'>  </span>We
-recommend throwing an <span class=SpellE><b style='mso-bidi-font-weight:normal'><span
-style='font-family:Consolas'>EvalException</span></b></span> if <span
-class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>JamUnit</span></b></tt></span> as passed as the
-input to any operation other than the block construct, <b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>=</span></b>, and type recognizers
-like <b style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>number<span
-class=GramE>?<span style='font-family:"Arial",sans-serif;font-weight:normal'>.</span></span></span></b><span
-style='mso-spacerun:yes'>  </span>Scheme is more liberal in its treatment of
-the <b style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>(void)</span></b>
-value; Scheme supports embedding <b style='mso-bidi-font-weight:normal'><span
-style='font-family:Consolas'>(void)</span></b> inside any data structure.<span
-style='mso-spacerun:yes'>  </span>You can follow this option in implementing
-Jam if you choose.<span style='mso-spacerun:yes'>  </span>(You can use <span
-class=SpellE>DrRacket</span> as a guide.)<span style='mso-spacerun:yes'> 
-</span>None of the behavior of <span class=SpellE>JamUnit</span> will be tested
-in our grading suites other than its use in blocks.</p>
+object (as long as it is not a <b><span style='font-family:Consolas'>JamVal</span></b>)
+for this purpose   The special value <tt><b><span style='font-family:Consolas'>JamUnit</span></b></tt>
+can bound to a variable, returned by a <span style='font-family:Consolas'>map</span>,
+and appear as an expression ins a block.  We recommend throwing an <b><span
+style='font-family:Consolas'>EvalException</span></b> if <tt><b><span
+style='font-family:Consolas'>JamUnit</span></b></tt> as passed as the input to
+any operation other than the block construct, <b><span style='font-family:Consolas'>=</span></b>,
+and type recognizers like <b><span style='font-family:Consolas'>number?</span></b>. 
+Scheme is more liberal in its treatment of the <b><span style='font-family:
+Consolas'>(void)</span></b> value; Scheme supports embedding <b><span
+style='font-family:Consolas'>(void)</span></b> inside any data structure.  You
+can follow this option in implementing Jam if you choose.  (You can use
+DrRacket as a guide.)  None of the behavior of JamUnit will be tested in our
+grading suites other than its use in blocks.</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>It
-<tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>V1</span></b></tt> is not a box, then the
-interpreter generates a run-time error. The <span class=SpellE><tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>JamUnit</span></b></tt></span> value can appear anywhere
+<p>It <tt><b><span style='font-family:Consolas'>V1</span></b></tt> is not a
+box, then the interpreter generates a run-time error. The <tt><b><span
+style='font-family:Consolas'>JamUnit</span></b></tt> value can appear anywhere
 in a computation, but many primitive operations (those for which it makes no
-sense) reject it as an illegal input; it is analogous to the value <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>(void)</span></b></tt> in Scheme.<span
-style='mso-spacerun:yes'>  </span></p>
+sense) reject it as an illegal input; it is analogous to the value <tt><b><span
+style='font-family:Consolas'>(void)</span></b></tt> in Scheme.  </p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>A
-box (reference cell) is a Jam value and can be returned as the result of an
-expression. When converted to a string, the output of a box should appear as <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>(ref&nbsp;&lt;value&gt;)</span></b></tt>. This expression</p>
+<p>A box (reference cell) is a Jam value and can be returned as the result of
+an expression. When converted to a string, the output of a box should appear as
+<tt><b><span style='font-family:Consolas'>(ref&nbsp;&lt;value&gt;)</span></b></tt>.
+This expression</p>
 
-<p style='margin-left:45.8pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-class=GramE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>let</span></b></tt></span><tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'> x := ref
-10; in {x &lt;- ref 17; x}</span></b></tt></p>
+<p style='margin-left:45.8pt'><tt><b><span style='font-family:Consolas'>let x
+:= ref 10; in {x &lt;- ref 17; x}</span></b></tt></p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-class=GramE>should</span> evaluate to the <span class=SpellE><b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>JamVal</span></b></span>
+<p>should evaluate to the <b><span style='font-family:Consolas'>JamVal</span></b>
 that is displayed as the string</p>
 
-<p style='margin-left:45.8pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>(<span class=GramE>ref</span> (ref 17))</span></b></tt></p>
+<p style='margin-left:45.8pt'><tt><b><span style='font-family:Consolas'>(ref
+(ref 17))</span></b></tt></p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-class=GramE>in</span> call-by-value and call-by-need. In call-by-name
-evaluation, your interpreter should display the string</p>
+<p>in call-by-value and call-by-need. In call-by-name evaluation, your
+interpreter should display the string</p>
 
-<p style='margin-left:45.8pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>(<span class=GramE>ref</span> 10)</span></b></tt></p>
+<p style='margin-left:45.8pt'><tt><b><span style='font-family:Consolas'>(ref
+10)</span></b></tt></p>
 
-<p class=MsoNormal style='margin-left:.5in;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-class=GramE><span style='color:windowtext'>since</span></span><span
-style='color:windowtext'> the binding of </span><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas;color:windowtext'>x</span></b><span
+<p class=MsoNormal style='margin-left:.5in'><span style='color:windowtext'>since
+the binding of </span><b><span style='font-family:Consolas;color:windowtext'>x</span></b><span
 style='color:windowtext'> is re-evaluated for every occurrence</span><span
-style='font-family:"Times New Roman",serif;color:windowtext'>. <o:p></o:p></span></p>
+style='font-family:"Times New Roman",serif;color:windowtext'>. </span></p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>You
-will have to modify your <span class=SpellE><b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>toString</span></b></span> method to
-support the correct display of boxes. Equality for boxes is based on the
-address of the box, not the contents, i.e. the expression</p>
+<p>You will have to modify your <b><span style='font-family:Consolas'>toString</span></b>
+method to support the correct display of boxes. Equality for boxes is based on
+the address of the box, not the contents, i.e. the expression</p>
 
-<p style='margin-left:45.8pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-class=GramE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>let</span></b></tt></span><tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'> x := ref
-10; y := ref 10; in x = y</span></b></tt></p>
+<p style='margin-left:45.8pt'><tt><b><span style='font-family:Consolas'>let x
+:= ref 10; y := ref 10; in x = y</span></b></tt></p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-class=GramE>evaluates</span> to <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>false</span></b></tt>
+<p>evaluates to <tt><b><span style='font-family:Consolas'>false</span></b></tt>
 regardless of the semantics for let (call-by-value, call-by-name,
 call-by-need).</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>The
-primitive function <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>ref?</span></b></tt>
-acts like all other type recognizers, e.g., <b style='mso-bidi-font-weight:
-normal'><span style='font-family:Consolas'>number?</span></b>, in that it
-accepts one argument, which can be of any type, but only returns <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>true</span></b></tt> if that argument is a box, and <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>false</span></b></tt> in all other cases.</p>
+<p>The primitive function <tt><b><span style='font-family:Consolas'>ref?</span></b></tt>
+acts like all other type recognizers, e.g., <b><span style='font-family:Consolas'>number?</span></b>,
+in that it accepts one argument, which can be of any type, but only returns <tt><b><span
+style='font-family:Consolas'>true</span></b></tt> if that argument is a box,
+and <tt><b><span style='font-family:Consolas'>false</span></b></tt> in all
+other cases.</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
-style='font-size:14.0pt;font-family:"Arial",sans-serif'>Adding blocks</span></strong><span
-style='font-size:14.0pt'> &nbsp; <o:p></o:p></span></p>
+<p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Adding
+blocks</span></strong><span style='font-size:14.0pt'> &nbsp; </span></p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>The
-block <span class=GramE><tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>{ <i>e</i></span></b></tt><tt><b
-style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><sub><span
-style='mso-ansi-font-size:12.0pt;font-family:"Arial",sans-serif'>1</span></sub></i></b></tt></span><tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>; ...; <span class=SpellE><i>e</i><i style='mso-bidi-font-style:
-normal'><sub><span style='font-family:"Arial",sans-serif;font-weight:normal'>n</span></sub></i></span>
-}</span></b></tt>, <tt><i style='mso-bidi-font-style:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:"Arial",sans-serif'>n &gt; 0</span></i></tt>,
-evaluates <tt><b style='mso-bidi-font-weight:normal'><i><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>e</span></i></b></tt><tt><b style='mso-bidi-font-weight:
-normal'><i style='mso-bidi-font-style:normal'><sub><span style='mso-ansi-font-size:
-12.0pt;font-family:"Arial",sans-serif'>1</span></sub></i></b></tt>, ..., <span
-class=SpellE><tt><b style='mso-bidi-font-weight:normal'><i><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>e</span></i></b></tt><tt><i
-style='mso-bidi-font-style:normal'><sub><span style='mso-ansi-font-size:12.0pt;
-font-family:"Arial",sans-serif'>n</span></sub></i></tt></span> in left-to-right
-order and returns the value of <span class=SpellE><tt><b style='mso-bidi-font-weight:
-normal'><i><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>e</span></i></b></tt><tt><i
-style='mso-bidi-font-style:normal'><sub><span style='mso-ansi-font-size:12.0pt;
-font-family:"Arial",sans-serif'>n</span></sub></i></tt></span>. The expressions
-<tt><b style='mso-bidi-font-weight:normal'><i><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>e</span></i></b></tt><tt><b style='mso-bidi-font-weight:
-normal'><i style='mso-bidi-font-style:normal'><sub><span style='mso-ansi-font-size:
-12.0pt;font-family:"Arial",sans-serif'>1</span></sub></i></b></tt>, <span
-class=GramE>... ,</span> <span class=SpellE><tt><b style='mso-bidi-font-weight:
-normal'><i><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>e</span></i></b></tt><tt><i
-style='mso-bidi-font-style:normal'><sub><span style='mso-ansi-font-size:12.0pt;
-font-family:"Arial",sans-serif'>n</span></sub></i></tt></span> may evaluate to <span
-class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>JamUnit</span></b></tt></span> (returned by the
-assignment operator) without aborting the computation. In the Jam grammar, a <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>Block</span></b></tt> is an additional form for an
-expression analogous to <tt><b style='mso-bidi-font-weight:normal'><span
-style='mso-ansi-font-size:12.0pt;font-family:Consolas'>map</span></b></tt>, <tt><b
-style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:12.0pt;
-font-family:Consolas'>if</span></b></tt>, and <tt><b style='mso-bidi-font-weight:
-normal'><span style='mso-ansi-font-size:12.0pt;font-family:Consolas'>let</span></b></tt>.
-Hence, it cannot appear as the first argument in a binary expression unless it
-is enclosed in parentheses. The “empty block” is a parser error (<span
-class=SpellE><tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;font-family:Consolas'>ParseException</span></b></tt></span>).</p>
+<p>The block <tt><b><span style='font-family:Consolas'>{ <i>e</i></span></b></tt><tt><b><i><sub><span
+style='font-family:"Arial",sans-serif'>1</span></sub></i></b></tt><tt><b><span
+style='font-family:Consolas'>; ...; <i>e</i></span></b></tt><tt><i><sub><span
+style='font-family:"Arial",sans-serif'>n</span></sub></i></tt><tt><b><span
+style='font-family:Consolas'> }</span></b></tt>, <tt><i><span style='font-family:
+"Arial",sans-serif'>n &gt; 0</span></i></tt>, evaluates <tt><b><i><span
+style='font-family:Consolas'>e</span></i></b></tt><tt><b><i><sub><span
+style='font-family:"Arial",sans-serif'>1</span></sub></i></b></tt>, ..., <tt><b><i><span
+style='font-family:Consolas'>e</span></i></b></tt><tt><i><sub><span
+style='font-family:"Arial",sans-serif'>n</span></sub></i></tt> in left-to-right
+order and returns the value of <tt><b><i><span style='font-family:Consolas'>e</span></i></b></tt><tt><i><sub><span
+style='font-family:"Arial",sans-serif'>n</span></sub></i></tt>. The expressions
+<tt><b><i><span style='font-family:Consolas'>e</span></i></b></tt><tt><b><i><sub><span
+style='font-family:"Arial",sans-serif'>1</span></sub></i></b></tt>, ... , <tt><b><i><span
+style='font-family:Consolas'>e</span></i></b></tt><tt><i><sub><span
+style='font-family:"Arial",sans-serif'>n</span></sub></i></tt> may evaluate to <tt><b><span
+style='font-family:Consolas'>JamUnit</span></b></tt> (returned by the
+assignment operator) without aborting the computation. In the Jam grammar, a <tt><b><span
+style='font-family:Consolas'>Block</span></b></tt> is an additional form for an
+expression analogous to <tt><b><span style='font-family:Consolas'>map</span></b></tt>,
+<tt><b><span style='font-family:Consolas'>if</span></b></tt>, and <tt><b><span
+style='font-family:Consolas'>let</span></b></tt>. Hence, it cannot appear as
+the first argument in a binary expression unless it is enclosed in parentheses.
+The “empty block” is a parser error (<tt><b><span style='font-family:Consolas'>ParseException</span></b></tt>).</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
-style='font-family:"Arial",sans-serif'>Optional extra credit (10 points)</span></strong>
-&nbsp; Devise Jam programs that exhibits different behavior for eight of the nine
-modes of interpretation and run them from a unit test suite. It should not
-generate a run-time error in any of the nine cases, but it may diverge in one
-case so you should elide the unit test or set it up to time out (which is
-outside the Java subset for this course). </p>
+<p><strong><span style='font-family:"Arial",sans-serif'>Optional extra credit
+(10 points)</span></strong> &nbsp; Devise Jam programs that exhibits different
+behavior for eight of the nine modes of interpretation and run them from a unit
+test suite. It should not generate a run-time error in any of the nine cases,
+but it may diverge in one case so you should elide the unit test or set it up
+to time out (which is outside the Java subset for this course). </p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b>Testing</b>
-&nbsp; You are expected to write unit tests for all of your non-trivial methods
-or functions <em><span style='font-family:"Arial",sans-serif'>and submit your
-test code as part of your program</span></em>. For more information, refer back
-to <a href="../../Assignments/1/index.html">Assignment 1</a>.</p>
+<p><b>Testing</b> &nbsp; You are expected to write unit tests for all of your
+non-trivial methods or functions <em><span style='font-family:"Arial",sans-serif'>and
+submit your test code as part of your program</span></em>. For more
+information, refer back to <a href="../1/index.html">Assignment 1</a>.</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><strong><span
-style='font-family:"Arial",sans-serif'>All versions</span></strong> &nbsp; <span
-class=GramE>The</span> interface of all modes of Jam interpretation remains
-identical to that in <a href="../../Assignments/3">Assignment 3</a>. </p>
+<p><strong><span style='font-family:"Arial",sans-serif'>All versions</span></strong>
+&nbsp; The interface of all modes of Jam interpretation remains identical to
+that in <a href="../3">Assignment 3</a>. </p>
 
-<h3 style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-style='font-size:18.0pt;mso-fareast-font-family:"Times New Roman"'>Testing and
-Submitting Your Program<o:p></o:p></span></h3>
+<h3><span style='font-size:18.0pt'>Testing and Submitting Your Program</span></h3>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>The
-<span class=SpellE><b style='mso-bidi-font-weight:normal'><span
-style='font-family:Consolas'>src</span></b></span> folder in the provided code
-base only includes the Junit test file <b style='mso-bidi-font-weight:normal'><span
-style='font-family:Consolas'>Assign4Test.java</span></b>.<span
-style='mso-spacerun:yes'>  </span>Make sure that your program passes the sample
-unit tests in <b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'>Assign1Test.java</span></b>, <b style='mso-bidi-font-weight:normal'><span
-style='font-family:Consolas'>Assign2Test.java</span></b>, and <b
-style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>Assign3Test.java</span></b>,
-which all appear in the sample solution to Project 3.<span
-style='mso-spacerun:yes'>  </span>You obviously need to add more test cases
-than appear <b style='mso-bidi-font-weight:normal'><span style='font-family:
-Consolas'>Assign4Test.java</span></b>. You can add your tests to this file or
-create <span class=SpellE>you</span> own Junit test file for Project 4.<span
-style='mso-spacerun:yes'>  </span>You need to thoroughly test the
-interpretation of each new construct, notably boxes and mutation.</p>
+<p>The <b><span style='font-family:Consolas'>src</span></b> folder in the
+provided code base only includes the Junit test file <b><span style='font-family:
+Consolas'>Assign4Test.java</span></b>.  Make sure that your program passes the
+sample unit tests in <b><span style='font-family:Consolas'>Assign1Test.java</span></b>,
+<b><span style='font-family:Consolas'>Assign2Test.java</span></b>, and <b><span
+style='font-family:Consolas'>Assign3Test.java</span></b>, which all appear in
+the sample solution to Project 3.  You obviously need to add more test cases
+than appear <b><span style='font-family:Consolas'>Assign4Test.java</span></b>.
+You can add your tests to this file or create you own Junit test file for
+Project 4.  You need to thoroughly test the interpretation of each new
+construct, notably boxes and mutation.</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>As
-always, each class and non-trivial method in your program should be preceded by
-a short&nbsp;<span class=SpellE><span style='font-size:14.0pt;font-family:Consolas'>javadoc</span></span>&nbsp;comment
-stating precisely what it does.<span style='mso-fareast-font-family:"Times New Roman";
-mso-fareast-theme-font:minor-fareast'><o:p></o:p></span></p>
+<p>As always, each class and non-trivial method in your program should be
+preceded by a short&nbsp;<span style='font-size:14.0pt;font-family:Consolas'>javadoc</span>&nbsp;comment
+stating precisely what it does.</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Edit
-the <tt><b style='mso-bidi-font-weight:normal'><span style='mso-ansi-font-size:
-12.0pt;mso-bidi-font-size:12.0pt;font-family:Consolas'>README</span></b></tt>
+<p>Edit the <tt><b><span style='font-family:Consolas'>README</span></b></tt>
 file for your repository so that it</p>
 
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;tab-stops:list 1.75in'><![if !supportLists]><span
-style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>outlines the organization of your program, </p>
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>outlines the organization of your program, </p>
 
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;tab-stops:list 1.75in'><![if !supportLists]><span
-style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]>specifies any compatible additions that you made
-the provided API (not generally necessary), and</p>
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>specifies any compatible additions that you made the provided API
+(not generally necessary), and</p>
 
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;tab-stops:list 1.75in'><![if !supportLists]><span
-style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:Symbol;
-mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol'><span
-style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span class=SpellE><span class=GramE>specifes</span></span>
-what testing process you used to confirm the correctness of your program.</p>
+<p class=MsoNormal style='margin-left:.75in;text-indent:-.25in'><span
+style='font-size:10.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>specifes what testing process you used to confirm the correctness
+of your program.</p>
 
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-margin-left:.5in;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Note
-that the <b style='mso-bidi-font-weight:normal'><span style='font-family:Consolas'>README</span></b>
-file is a GitHub “<span class=SpellE>MarkDown</span>” file, text augmented by a
-few simple formatting annotations.<span style='mso-spacerun:yes'>  </span><span
-class=SpellE>MarkDown</span> (MD) is much less powerful than HTML but much
-easier to use.<span style='mso-spacerun:yes'>  </span>The webpage <b
-style='mso-bidi-font-weight:normal'><a
+<p class=MsoNormal style='margin-left:.5in'>Note that the <b><span
+style='font-family:Consolas'>README</span></b> file is a GitHub “MarkDown”
+file, text augmented by a few simple formatting annotations.  MarkDown (MD) is
+much less powerful than HTML but much easier to use.  The webpage <b><a
 href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-cheat-sheet</a></b>
-is a good summary for learning <span class=SpellE>MarkDown</span> and a useful
-reference.</p>
+is a good summary for learning MarkDown and a useful reference.</p>
 
-<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-margin-left:.5in;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
-background:white'>Since your program resides in a repository owned by our
-classroom, you do not need to do anything to submit other than use the
-mechanism provided by GitHub Classroom to submit your <i style='mso-bidi-font-style:
-normal'>remote</i> <span class=SpellE>respository</span>.</p>
+<p class=MsoNormal style='margin-left:.5in;background:white'>Since your program
+resides in a repository owned by our classroom, you do not need to do anything
+to submit other than use the mechanism provided by GitHub Classroom to submit
+your <i>remote</i> respository.</p>
 
-<p style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>Please
-make sure to remove or disable all debugging output generated by program.
-Excessive use of print statements considerably slows down your interpreter and
-thus the testing of your project. If your interpreter generates a timeout error
-because debug output drastically slows it down, you may not get credit for the
-test cases that took too long.</p>
+<p>Please make sure to remove or disable all debugging output generated by
+program. Excessive use of print statements considerably slows down your
+interpreter and thus the testing of your project. If your interpreter generates
+a timeout error because debug output drastically slows it down, you may not get
+credit for the test cases that took too long.</p>
 
-<h3 style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
-style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></h3>
+<h3>&nbsp;</h3>
 
 <div>
 
-<p class=MsoNormal style='tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><a
-href="../../">Back to course website</a></p>
+<p class=MsoNormal><a href="../../">Back to course website</a></p>
 
 </div>
 
