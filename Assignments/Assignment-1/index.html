@@ -8,11 +8,11 @@
 <!--
  /* Font Definitions */
  @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
 @font-face
 	{font-family:Consolas;
 	panose-1:2 11 6 9 2 2 4 3 2 4;}
@@ -79,6 +79,12 @@ p.class1, li.class1, div.class1
 	margin-left:0in;
 	font-size:12.0pt;
 	font-family:"Arial",sans-serif;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0in;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
 .MsoChpDefault
 	{font-size:10.0pt;}
 @page WordSection1
@@ -136,82 +142,89 @@ style='font-size:14.0pt;font-family:"Times New Roman",serif'> &nbsp; </span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>We
 recommend using either IntelliJ or DrJava as your Java IDE for all programming
-assignments.  You can download DrJava in the form of the executable jar file </span><span
-style='font-family:Consolas'>drjava.jar</span><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> from <a
-href="http://www.cs.rice.edu/~javaplt/drjavarice">http://www.cs.rice.edu/~javaplt/drjavarice</a>. 
+assignments. &nbsp;You can download DrJava in the form of the executable jar
+file </span><span style='font-family:Consolas'>drjava.jar</span><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> from <a
+href="http://www.cs.rice.edu/~javaplt/drjavarice"><span style='font-family:
+"Arial",sans-serif'>http://www.cs.rice.edu/~javaplt/drjavarice</span></a>.&nbsp;
 When you accept the assignment, GitHub Classroom creates a repository for you
 that in initialized to contain all of the support files for the project
-including this project description.  DrJava only runs using Java 8.  We
-recommend using the Oracle Java 8 SE (build 8u331 or later) with DrJava; on
+including this project description.&nbsp; DrJava only runs using Java 8.&nbsp;
+We recommend using the Oracle Java 8 SE (build 8u331 or later) with DrJava; on
 Windows 10/12, DrJava appears to be slightly more reliable than other
-distributions of the Java 8 JDK such as OpenJDK 8.  DrJava has been developed
-using builds the Oracle Java 8 SE, most recently build 8u331 and the various
-versions of the Java 8 JDK differ in minor respects.  If you use IntelliJ as
-your IDE, you can choose any compatible JDK.  Beware of the fact that the
-assignments you submit must run from the command line and <i>cannot</i> place
-of the methods in the specified API in named packages.  If your program
-modifies the specified API (as stipulated in the assignment description below
-and codified in the sample test suite Assign1Test.java) by placing the API
-methods in named packages, your program does not implement the specified API
-and all grading tests will fail.  You can confirm that your program supports
-the specified API by running the sample test suite in Assign1Test.java.</span></p>
+distributions of the Java 8 JDK such as OpenJDK 8.&nbsp; DrJava has been
+developed using builds the Oracle Java 8 SE, most recently build 8u331 and the
+various versions of the Java 8 JDK differ in minor respects.&nbsp; If you use
+IntelliJ as your IDE, you can choose any compatible JDK.&nbsp; Beware of the
+fact that the assignments you submit must run from the command line and <i>cannot</i>
+place of the methods in the specified API in named packages.&nbsp; If your
+program modifies the specified API (as stipulated in the assignment description
+below and codified in the sample test suite Assign1Test.java) by placing the
+API methods in named packages, your program does not implement the specified
+API and all grading tests will fail.&nbsp; You can confirm that your program
+supports the specified API by running the sample test suite in
+Assign1Test.java.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Edit the </span><span
 style='font-family:Consolas'>README</span><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'> file for your repository to give an
-overview of your solution, most notably the API that it supports.  We recommend
-that you place your Java source files in the folder named </span><span
+overview of your solution, most notably the API that it supports.&nbsp; We
+recommend that you place your Java source files in the folder named </span><span
 style='font-family:Consolas'>src</span><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'> that is already present in your
-repository.  We also recommend placing your compiled class files in a separate
-folder named </span><span style='font-family:Consolas'>classes</span><span
+repository.&nbsp; We also recommend placing your compiled class files in a
+separate folder named </span><span style='font-family:Consolas'>classes</span><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> that is already
-present in your repository.  In DrJava, you can define a project with </span><span
+present in your repository.&nbsp; In DrJava, you can define a project with </span><span
 style='font-family:Consolas'>src</span><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'> as the source directory and </span><span
 style='font-family:Consolas'>classes</span><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'> as the folder where the compiler places
 the </span><span style='font-family:Consolas'>.class</span><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> files
-corresponding to the source program.  Like more elaborate professional IDEs,
-DrJava supports compiling and testing projects.</span></p>
+corresponding to the source program.&nbsp; Like more elaborate professional
+IDEs, DrJava supports compiling and testing projects.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>DrJava is
-distributed as a Java </span><code><span style='font-family:Consolas'>jar</span></code><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> file at the web
-site <a href="http://drjava.org/">http://drjava.org</a> as well our local site
-(<a href="http://www.cs.rice.edu/~javaplt/drjavarice">http://www.cs.rice.edu/~javaplt/drjavarice</a>)
-but the local site typically has more recent builds. You can run DrJava on a
-Linux or Mac system (with Java JDK 8 installed) by typing </span></p>
+distributed as a Java </span><code><span style='font-size:10.0pt;font-family:
+Consolas'>jar</span></code><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
+file at the web site <a href="http://drjava.org/"><span style='font-family:
+"Arial",sans-serif'>http://drjava.org</span></a> as well our local site (<a
+href="http://www.cs.rice.edu/~javaplt/drjavarice"><span style='font-family:
+"Arial",sans-serif'>http://www.cs.rice.edu/~javaplt/drjavarice</span></a>) but
+the local site typically has more recent builds. You can run DrJava on a Linux
+or Mac system (with Java JDK 8 installed) by typing </span></p>
 
-<p><code><span style='font-family:Consolas'>java -jar drjava.jar </span></code></p>
+<p><code><span style='font-size:10.0pt;font-family:Consolas'>java -jar
+drjava.jar </span></code></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>assuming
-that </span><tt><span style='font-family:Consolas'>drjava.jar</span></tt><span
+that </span><tt><span style='font-size:10.0pt;font-family:Consolas'>drjava.jar</span></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> is located in the
-current directory.  DrJava is not a registered Mac application, so DrJava can
-only be run from the command line on Macs. On Windows machines (with a properly
-installed Java JDK 8), you can run the </span><tt><span style='font-family:
-Consolas'>drjava.jar</span></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
-file simply by double-clicking on the icon. If the Registry has the wrong file
-type associated the </span><tt><span style='font-family:Consolas'>.jar</span></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> files, then double-clicking
-</span><tt><span style='font-family:Consolas'>.jar</span></tt><span
+current directory.&nbsp; DrJava is not a registered Mac application, so DrJava
+can only be run from the command line on Macs. On Windows machines (with a
+properly installed Java JDK 8), you can run the </span><tt><span
+style='font-size:10.0pt;font-family:Consolas'>drjava.jar</span></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> file simply by
+double-clicking on the icon. If the Registry has the wrong file type associated
+the </span><tt><span style='font-size:10.0pt;font-family:Consolas'>.jar</span></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> files, then
+double-clicking </span><tt><span style='font-size:10.0pt;font-family:Consolas'>.jar</span></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> icons will not
 work. In this case, we recommend running DrJava inside the Windows “Command
 Prompt” or Powershell using the same command as shown above for Linux. </span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Documentation
-for DrJava is available at <a href="http://drjava.org/">drjava.org</a>. If you
-have further questions about DrJava, ask them on Piazza. </span></p>
+for DrJava is available at <a href="http://drjava.org/"><span style='font-family:
+"Arial",sans-serif'>drjava.org</span></a>. If you have further questions about
+DrJava, ask them on Piazza. </span></p>
 
 <p><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Testing</span></b><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> &nbsp; You are
 expected to write unit tests for all of your non-trivial methods or functions <em>and
 submit your test code as part of your program</em>. DrJava provides integrated
-support for JUnit which makes this task easy.  IntelliJ supports integrated
-testing using Junit as well.</span></p>
+support for JUnit which makes this task easy.&nbsp; IntelliJ supports
+integrated testing using Junit as well.</span></p>
 
 <p><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Task</span></b><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> &nbsp; Your task
@@ -227,86 +240,93 @@ other syntax error.</span></p>
 <p><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Java
 Support Library</span></b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
 &nbsp; In the provided support files, the parser's input token stream is
-generated by a </span><tt><span style='font-family:Consolas'>Lexer</span></tt><span
+generated by a </span><tt><span style='font-size:10.0pt;font-family:Consolas'>Lexer</span></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> object supporting
-the 0-ary method </span><tt><span style='font-family:Consolas'>readToken()</span></tt><span
+the 0-ary method </span><tt><span style='font-size:10.0pt;font-family:Consolas'>readToken()</span></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>. The </span><tt><span
-style='font-family:Consolas'>readToken()</span></tt><span style='font-size:
-14.0pt;font-family:"Times New Roman",serif'> method produces a stream of </span><span
-style='font-family:Consolas'>Token</span><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> objects belonging to various subclasses
-of the </span><tt><span style='font-family:Consolas'>Token</span></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> interface. The </span><tt><span
-style='font-family:Consolas'>Lexer</span></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> class supports two constructors: (i) a zero-ary
-constructor that converts standard input to a </span><tt><span
-style='font-family:Consolas'>Lexer</span></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> and (ii) a unary constructor </span><tt><span
-style='font-family:Consolas'>Lexer(String fileName)</span></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> that converts the
-specified file to a </span><tt><span style='font-family:Consolas'>Lexer</span></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>. The file </span><tt><span
-style='font-family:Consolas'>lexer.java</span></tt><span style='font-family:
-Consolas'> </span><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>contains
-the definition of the </span><tt><span style='font-family:Consolas'>Lexer</span></tt><span
+style='font-size:10.0pt;font-family:Consolas'>readToken()</span></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> method produces a
+stream of </span><span style='font-family:Consolas'>Token</span><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> objects belonging
+to various subclasses of the </span><tt><span style='font-size:10.0pt;
+font-family:Consolas'>Token</span></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> interface. The </span><tt><span
+style='font-size:10.0pt;font-family:Consolas'>Lexer</span></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> class supports
+two constructors: (i) a zero-ary constructor that converts standard input to a </span><tt><span
+style='font-size:10.0pt;font-family:Consolas'>Lexer</span></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> and (ii) a unary
+constructor </span><tt><span style='font-size:10.0pt;font-family:Consolas'>Lexer(String
+fileName)</span></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
+that converts the specified file to a </span><tt><span style='font-size:10.0pt;
+font-family:Consolas'>Lexer</span></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'>. The file </span><tt><span
+style='font-size:10.0pt;font-family:Consolas'>lexer.java</span></tt><span
+style='font-family:Consolas'> </span><span style='font-size:14.0pt;font-family:
+"Times New Roman",serif'>contains the definition of the </span><tt><span
+style='font-size:10.0pt;font-family:Consolas'>Lexer</span></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> class and the
 collection of classes representing tokens (the Java interface type </span><tt><span
-style='font-family:Consolas'>Token</span></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>) and abstract syntax trees (the java
-interface type </span><tt><span style='font-family:Consolas'>AST</span></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>).</span></p>
+style='font-size:10.0pt;font-family:Consolas'>Token</span></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>) and abstract
+syntax trees (the java interface type </span><tt><span style='font-size:10.0pt;
+font-family:Consolas'>AST</span></tt><span style='font-size:14.0pt;font-family:
+"Times New Roman",serif'>).</span></p>
 
 <h2>The API That Your Program Must Support</h2>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>All
-classes visible in the API must be in the default (top-level) package. Using
-named packages will break our grading scripts, causing a catastrophic loss of
-points on the assignment.  If your program passes the tests in the file
+classes visible in the API must be in the default (top-level) package. Using named
+packages will break our grading scripts, causing a catastrophic loss of points
+on the assignment.&nbsp; If your program passes the tests in the file
 Assign1Test.java in the empty package, it conforms to this standard.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Your
-parser should be expressed as a class </span><tt><b><span style='font-family:
-Consolas'>Parser</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
-with constructors </span><tt><b><span style='font-family:Consolas'>Parser(Reader
-stream)</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
-and </span><tt><b><span style='font-family:Consolas'>Parser(String filename)</span></b></tt><span
+parser should be expressed as a class </span><tt><b><span style='font-size:
+10.0pt;font-family:Consolas'>Parser</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> with constructors </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>Parser(Reader stream)</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> and </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>Parser(String filename)</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> which create
 parsers reading the specified stream or file. The </span><tt><b><span
-style='font-family:Consolas'>Reader</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> version of these constructors is very
-convenient when you are testing your parser from the DrJava read-eval-print
-loop or from unit test methods.  The </span><b><span style='font-family:Consolas'>String</span></b><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> version supports
-parsing Jam programs that reside in files.</span></p>
+style='font-size:10.0pt;font-family:Consolas'>Reader</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> version of these
+constructors is very convenient when you are testing your parser from the
+DrJava read-eval-print loop or from unit test methods.&nbsp; The </span><b><span
+style='font-family:Consolas'>String</span></b><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> version supports parsing Jam programs
+that reside in files.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The </span><tt><b><span
-style='font-family:Consolas'>Parser</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> class should contain a public method </span><tt><b><span
-style='font-family:Consolas'>AST parse()</span></b></tt><span style='font-size:
-14.0pt;font-family:"Times New Roman",serif'> that returns the abstract syntax
-tree for the Jam expression in the input stream. Our grading program will print
-the output using the method </span><tt><b><span style='font-family:Consolas'>System.out.println</span></b></tt><span
+style='font-size:10.0pt;font-family:Consolas'>Parser</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> class should
+contain a public method </span><tt><b><span style='font-size:10.0pt;font-family:
+Consolas'>AST parse()</span></b></tt><span style='font-size:14.0pt;font-family:
+"Times New Roman",serif'> that returns the abstract syntax tree for the Jam
+expression in the input stream. Our grading program will print the output using
+the method </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>System.out.println</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, which invokes
-the </span><tt><b><span style='font-family:Consolas'>toString</span></b></tt><span
+the </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>toString</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> method on its
 argument. All of the requisite abstract syntax classes including </span><tt><b><span
-style='font-family:Consolas'>toString</span></b></tt><span style='font-size:
-14.0pt;font-family:"Times New Roman",serif'> methods are defined in the file </span><b><span
-style='font-family:Consolas'>AST.java</span></b><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> in the empty package.  All of these
-support files are located in the folder </span><b><span style='font-family:
-Consolas'>src</span></b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
-in your Assignment 1 repository.</span></p>
+style='font-size:10.0pt;font-family:Consolas'>toString</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> methods are
+defined in the file </span><b><span style='font-family:Consolas'>AST.java</span></b><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> in the empty
+package.&nbsp; All of these support files are located in the folder </span><b><span
+style='font-family:Consolas'>src</span></b><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> in your Assignment 1 repository.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>If your
 parser encounters an erroneous input (including illegal tokens), simply throw a
-</span><tt><b><span style='font-family:Consolas'>ParseException</span></b></tt><span
+</span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>ParseException</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> containing a
-message explanation explaining the error.  This operation will abort parsing
-the program.  The parser in this assignment does not attempt to recover from
-syntax errors to continue parsing. This behavior requires a complex
-specification including<a name=jam> many special cases, which is beyond the
-scope of this assignment.</a></span></p>
+message explanation explaining the error.&nbsp; This operation will abort
+parsing the program.&nbsp; The parser in this assignment does not attempt to
+recover from syntax errors to continue parsing. This behavior requires a
+complex specification including<a name=jam> many special cases, which is beyond
+the scope of this assignment.</a></span></p>
 
 <h2>Jam Syntax Definition</h2>
 
@@ -316,87 +336,94 @@ your parser should recognize as legal Jam programs.</span></p>
 
 <p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>The
 Meta-Language</span></strong><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
-The parser's input language is described using Extended Backus-Naur Form
-(EBNF). When reading the notation, keep the following in mind:</span></p>
+The parser's input language is described using Extended Backus-Naur Form (EBNF).
+When reading the notation, keep the following in mind:</span></p>
 
-<ul type=disc>
+<ul style='margin-top:0in' type=disc>
  <li class=MsoNormal><span style='font-size:14.0pt'>A symbol in the
      meta-language always starts with a capital letter. Therefore, </span><tt><b><span
-     style='font-family:Consolas'>Symbol</span></b></tt><span style='font-size:
-     14.0pt'> is a symbol in the-meta language, whereas </span><tt><b><span
-     style='font-family:Consolas'>literal</span></b></tt><span
+     style='font-size:10.0pt;font-family:Consolas'>Symbol</span></b></tt><span
+     style='font-size:14.0pt'> is a symbol in the-meta language, whereas </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>literal</span></b></tt><span
      style='font-size:14.0pt'> is the actual text &quot;literal&quot;. Note
      that this convention depends on the fact that no literals in Jam begin
      with a capital letter.</span></li>
  <li class=MsoNormal><span style='font-size:14.0pt'>A phrase </span><tt><b><i><span
-     style='font-family:Consolas'>P</span></i></b></tt><span style='font-size:
-     14.0pt'> enclosed in braces </span><tt><b><span style='font-family:Consolas'>{
-     <i>P</i> }</span></b></tt><span style='font-size:14.0pt'> is optional, <i>i.e.</i>
-     both </span><tt><b><i><span style='font-family:Consolas'>P</span></i></b></tt><span
+     style='font-size:10.0pt;font-family:Consolas'>P</span></i></b></tt><span
+     style='font-size:14.0pt'> enclosed in braces </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>{ <i>P</i> }</span></b></tt><span
+     style='font-size:14.0pt'> is optional, <i>i.e.</i> both </span><tt><b><i><span
+     style='font-size:10.0pt;font-family:Consolas'>P</span></i></b></tt><span
      style='font-size:14.0pt'> and the empty string match </span><tt><b><span
-     style='font-family:Consolas'>{ <i>P</i> }</span></b></tt><span
+     style='font-size:10.0pt;font-family:Consolas'>{ <i>P</i> }</span></b></tt><span
      style='font-size:14.0pt'>.</span></li>
  <li class=MsoNormal><span style='font-size:14.0pt'>A phrase </span><tt><b><i><span
-     style='font-family:Consolas'>P</span></i></b></tt><span style='font-size:
-     14.0pt'> followed by </span><tt><b><span style='font-family:Consolas'>*</span></b></tt><span
+     style='font-size:10.0pt;font-family:Consolas'>P</span></i></b></tt><span
+     style='font-size:14.0pt'> followed by </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>*</span></b></tt><span
      style='font-size:14.0pt'> is iterated zero or more times, <i>e.g.</i> </span><tt><b><span
-     style='font-family:Consolas'>Def*</span></b></tt><span style='font-size:
-     14.0pt'> means the concatenation of zero or more </span><tt><b><span
-     style='font-family:Consolas'>Def</span></b></tt><span style='font-size:
-     14.0pt'> phrases:<br>
+     style='font-size:10.0pt;font-family:Consolas'>Def*</span></b></tt><span
+     style='font-size:14.0pt'> means the concatenation of zero or more </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>Def</span></b></tt><span
+     style='font-size:14.0pt'> phrases:<br>
      <br>
-     </span><tt><b><span style='font-family:Consolas'>Def</span></b></tt><span
+     </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Def</span></b></tt><span
      style='font-size:14.0pt'><br>
-     </span><tt><b><span style='font-family:Consolas'>Def Def</span></b></tt><span
+     </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Def Def</span></b></tt><span
      style='font-size:14.0pt'><br>
-     </span><tt><b><span style='font-family:Consolas'>... </span></b></tt><span
+     </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>... </span></b></tt><span
      style='font-size:14.0pt'><br>
      and so on, including the empty string. </span></li>
  <li class=MsoNormal><span style='font-size:14.0pt'>A phrase </span><tt><b><i><span
-     style='font-family:Consolas'>P</span></i></b></tt><span style='font-size:
-     14.0pt'> followed by </span><tt><b><span style='font-family:Consolas'>+</span></b></tt><span
+     style='font-size:10.0pt;font-family:Consolas'>P</span></i></b></tt><span
+     style='font-size:14.0pt'> followed by </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>+</span></b></tt><span
      style='font-size:14.0pt'> is iterated one or more times, <i>e.g.</i> </span><tt><b><span
-     style='font-family:Consolas'>Def+</span></b></tt><span style='font-size:
-     14.0pt'> means the concatenation of one or more </span><tt><b><span
-     style='font-family:Consolas'>Def</span></b></tt><span style='font-size:
-     14.0pt'> phrases:<br>
-     </span><tt><b><span style='font-family:Consolas'>Def</span></b></tt><span
+     style='font-size:10.0pt;font-family:Consolas'>Def+</span></b></tt><span
+     style='font-size:14.0pt'> means the concatenation of one or more </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>Def</span></b></tt><span
+     style='font-size:14.0pt'> phrases:<br>
+     </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Def</span></b></tt><span
      style='font-size:14.0pt'><br>
-     </span><tt><b><span style='font-family:Consolas'>Def Def</span></b></tt><span
+     </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Def Def</span></b></tt><span
      style='font-size:14.0pt'><br>
-     </span><tt><b><span style='font-family:Consolas'>... </span></b></tt><span
+     </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>... </span></b></tt><span
      style='font-size:14.0pt'><br>
      and so on, but <strong>not</strong> the empty string.</span></li>
  <li class=MsoNormal><span style='font-size:14.0pt'>If a phrase </span><tt><b><i><span
-     style='font-family:Consolas'>P</span></i></b></tt><span style='font-size:
-     14.0pt'> enclosed in brackets </span><tt><b><span style='font-family:Consolas'>{
-     <i>P</i> }</span></b></tt><span style='font-size:14.0pt'> is followed by a
-     </span><tt><b><span style='font-family:Consolas'>*</span></b></tt><span
-     style='font-size:14.0pt'> or </span><tt><b><span style='font-family:Consolas'>+</span></b></tt><span
-     style='font-size:14.0pt'>, the braces are simply denote grouping: the
-     enclosed phrase is iterated as specified by the * or + symbol. For
-     example, </span><tt><b><span style='font-family:Consolas'>{ A B }*</span></b></tt><span
+     style='font-size:10.0pt;font-family:Consolas'>P</span></i></b></tt><span
+     style='font-size:14.0pt'> enclosed in brackets </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>{ <i>P</i> }</span></b></tt><span
+     style='font-size:14.0pt'> is followed by a </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>*</span></b></tt><span
+     style='font-size:14.0pt'> or </span><tt><b><span style='font-size:10.0pt;
+     font-family:Consolas'>+</span></b></tt><span style='font-size:14.0pt'>,
+     the braces are simply denote grouping: the enclosed phrase is iterated as
+     specified by the * or + symbol. For example, </span><tt><b><span
+     style='font-size:10.0pt;font-family:Consolas'>{ A B }*</span></b></tt><span
      style='font-size:14.0pt'> is matched by zero or more concatenations of A
-     B: </span><tt><b><span style='font-family:Consolas'>A B</span></b></tt><span
+     B: </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>A B</span></b></tt><span
      style='font-size:14.0pt'><br>
-     </span><tt><b><span style='font-family:Consolas'>A B A B</span></b></tt><span
+     </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>A B A B</span></b></tt><span
      style='font-size:14.0pt'><br>
      and so on, as well as the empty string, but <strong>not</strong> </span><tt><b><span
-     style='font-family:Consolas'>A</span></b></tt><span style='font-size:14.0pt'>
-     or </span><tt><b><span style='font-family:Consolas'>A B A</span></b></tt><span
-     style='font-size:14.0pt'>.</span></li>
+     style='font-size:10.0pt;font-family:Consolas'>A</span></b></tt><span
+     style='font-size:14.0pt'> or </span><tt><b><span style='font-size:10.0pt;
+     font-family:Consolas'>A B A</span></b></tt><span style='font-size:14.0pt'>.</span></li>
  <li class=MsoNormal><span style='font-size:14.0pt'>If something that is
      interpreted as part of the meta language should be interpreted literally
      as part of the language we are describing, it will be enclosed in <i>single</i>
-     quotes. Therefore, </span><tt><b><span style='font-family:Consolas'>'A'</span></b></tt><span
-     style='font-size:14.0pt'> is the actual letter &quot;A&quot;, not the
-     symbol </span><tt><b><span style='font-family:Consolas'>A</span></b></tt><span
-     style='font-size:14.0pt'> in the meta language, and </span><tt><b><i><span
-     style='font-family:Consolas'>P</span></i></b></tt><tt><b><span
-     style='font-family:Consolas'> '*'</span></b></tt><span style='font-size:
-     14.0pt'> is the phrase </span><tt><b><i><span style='font-family:Consolas'>P</span></i></b></tt><span
-     style='font-size:14.0pt'> followed by an actual asterisk, and does not
-     mean that the phase </span><tt><b><i><span style='font-family:Consolas'>P</span></i></b></tt><span
+     quotes. Therefore, </span><tt><b><span style='font-size:10.0pt;font-family:
+     Consolas'>'A'</span></b></tt><span style='font-size:14.0pt'> is the actual
+     letter &quot;A&quot;, not the symbol </span><tt><b><span style='font-size:
+     10.0pt;font-family:Consolas'>A</span></b></tt><span style='font-size:14.0pt'>
+     in the meta language, and </span><tt><b><i><span style='font-size:10.0pt;
+     font-family:Consolas'>P</span></i></b></tt><tt><b><span style='font-size:
+     10.0pt;font-family:Consolas'> '*'</span></b></tt><span style='font-size:
+     14.0pt'> is the phrase </span><tt><b><i><span style='font-size:10.0pt;
+     font-family:Consolas'>P</span></i></b></tt><span style='font-size:14.0pt'>
+     followed by an actual asterisk, and does not mean that the phase </span><tt><b><i><span
+     style='font-size:10.0pt;font-family:Consolas'>P</span></i></b></tt><span
      style='font-size:14.0pt'> should be repeated zero or more times, as
      described above.</span></li>
 </ul>
@@ -404,9 +431,8 @@ The parser's input language is described using Extended Backus-Naur Form
 <p><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The
 Input Language</span></b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
 &nbsp; The parser's input language (modulo a few changes described in the
-section (</span><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Left-associative
-Binary Operators</span></b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>)
-is </span><tt><b><span style='font-family:Consolas'>Input</span></b></tt><span
+section (<b>Left-associative Binary Operators</b>) is </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>Input</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> where: </span></p>
 
 <pre style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:
@@ -419,68 +445,70 @@ operations, identifiers, and numbers.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Adjacent
 tokens must be separated by whitespace (a non-empty sequence of spaces, tabs,
-and newlines) unless one of the tokens is a delimiter or operator. In identifying
-operators, the lexer chooses the longest possible match. Hence, </span><tt><b><span
-style='font-family:Consolas'>&lt;=</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> is interpreted as a single token rather
-than </span><tt><b><span style='font-family:Consolas'>&lt;</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> followed by </span><tt><b><span
-style='font-family:Consolas'>=</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>.</span></p>
+and newlines) unless one of the tokens is a delimiter or operator. In
+identifying operators, the lexer chooses the longest possible match. Hence, </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>&lt;=</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> is interpreted as
+a single token rather than </span><tt><b><span style='font-size:10.0pt;
+font-family:Consolas'>&lt;</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> followed by </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>=</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>.</span></p>
 
 <pre style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:
-Consolas'>Lower             ::= a | b | c | d | ... | z</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Upper             ::= 'A' | 'B' | 'C' | 'D' | ... | 'Z'      </span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Other             ::= ? | _</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Digit             ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Alpha             ::= Upper | Lower</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>AlphaOther        ::= Alpha | Other</span></b></pre><pre
+Consolas'>Lower &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= a | b | c | d | ... | z</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Upper &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= 'A' | 'B' | 'C' | 'D' | ... | 'Z' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Other &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= ? | _</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Digit &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Alpha &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= Upper | Lower</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>AlphaOther &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= Alpha | Other</span></b></pre><pre
 style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>AlphaOtherNumeric ::= AlphaOther | Digit</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Delimiter         ::= ( | ) | [ | ] | , | ;</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Operator          ::= '+' | - | ~ | '*' | / | = | != | &lt; | &gt; | &lt;= | &gt;= | &amp; | '|' | :=</span></b></pre>
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Delimiter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= ( | ) | [ | ] | , | ;</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Operator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= '+' | - | ~ | '*' | / | = | != | &lt; | &gt; | &lt;= | &gt;= | &amp; | '|' | :=</span></b></pre>
 
 <p><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Note</span></b><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>: The terminal
-symbols 'A', </span><tt><b><span style='font-family:Consolas'>'B'</span></b></tt><span
+symbols 'A', </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>'B'</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, ... are enclosed
-in single quotation marks because </span><tt><b><span style='font-family:Consolas'>A</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
-style='font-family:Consolas'>B</span></b></tt><span style='font-size:14.0pt;
+in single quotation marks because </span><tt><b><span style='font-size:10.0pt;
+font-family:Consolas'>A</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'>, </span><tt><b><span style='font-size:
+10.0pt;font-family:Consolas'>B</span></b></tt><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'>, ..., would automatically be the names of
 non-terminal symbols in our notation system. For essentially the same reason,
-we enclose the symbols </span><tt><b><span style='font-family:Consolas'>'+'</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
-style='font-family:Consolas'>'*'</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>, and </span><tt><b><span
-style='font-family:Consolas'>'|'</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> in single quotation marks; these symbols
-without quotation marks are metasymbols in the notation scheme described above.
-</span></p>
+we enclose the symbols </span><tt><b><span style='font-size:10.0pt;font-family:
+Consolas'>'+'</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>,
+</span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>'*'</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>, and </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>'|'</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> in single
+quotation marks; these symbols without quotation marks are metasymbols in the
+notation scheme described above. </span></p>
 
 <p><b><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Jam</span></b><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> &nbsp; The set of
 legitimate Jam phrases is the subset of the potential inputs consisting the
-expressions </span><tt><b><span style='font-family:Consolas'>Exp </span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>defined by the
-following grammar: </span></p>
+expressions </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Exp
+</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>defined
+by the following grammar: </span></p>
 
 <p><em><b><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Expressions</span></b></em></p>
 
 <pre style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:
-Consolas'>Exp         ::= Term { Binop Exp }</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>              | if Exp then Exp else Exp</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>              | let Def+ in Exp</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>              | map IdList to Exp</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Term        ::= Unop Term</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>              | Factor { ( ExpList ) }</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>              | Empty</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>              | Int</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>              | Bool</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Factor      ::= ( Exp ) | Prim | Id</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>ExpList     ::= { PropExpList }</span></b></pre><pre
+Consolas'>Exp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= Term { Binop Exp }</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| if Exp then Exp else Exp</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| let Def+ in Exp</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| map IdList to Exp</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Term &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= Unop Term</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Factor { ( ExpList ) }</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Empty</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Int</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Bool</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Factor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= ( Exp ) | Prim | Id</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>ExpList &nbsp;&nbsp;&nbsp;&nbsp;::= { PropExpList }</span></b></pre><pre
 style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>PropExpList ::= Exp { , Exp }*</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>IdList      ::= { PropIdList }</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>PropIdList  ::= Id { , Id}*</span></b></pre>
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>IdList &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= { PropIdList }</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>PropIdList&nbsp; ::= Id { , Id}*</span></b></pre>
 
 <p><em><b><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Definitions</span></b></em></p>
 
@@ -493,11 +521,11 @@ Constants, Operators, and Operations</span></b></em><b><span style='font-size:
 
 <pre><b><span style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></b></pre><pre
 style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Empty ::= empty</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Bool  ::= true | false</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Unop  ::= Sign | ~</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Sign  ::=  '+' | -</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Bool&nbsp; ::= true | false</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Unop&nbsp; ::= Sign | ~</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Sign&nbsp; ::=&nbsp; '+' | -</span></b></pre><pre
 style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Binop ::= Sign | '*' | / | = | != | &lt; | &gt; | &lt;= | &gt;= | &amp; | '|'</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Prim  ::= number? | function? | list? | empty? | cons? | cons | first | rest | arity</span></b></pre>
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Prim&nbsp; ::= number? | function? | list? | empty? | cons? | cons | first | rest | arity</span></b></pre>
 
 <p><em><b><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Identifiers</span></b></em></p>
 
@@ -505,27 +533,31 @@ style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas
 Consolas'>Id ::= AlphaOther {AlphaOther | Digit}*</span></b></pre>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Please
-note that </span><tt><b><span style='font-family:Consolas'>Id</span></b></tt><span
+note that </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Id</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> does <strong>not</strong>
-contain the anything that matches </span><tt><b><span style='font-family:Consolas'>Prim</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> or the keywords </span><tt><b><span
-style='font-family:Consolas'>if</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>, </span><tt><b><span style='font-family:
-Consolas'>then</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>,
-</span><tt><b><span style='font-family:Consolas'>else</span></b></tt><span
+contain the anything that matches </span><tt><b><span style='font-size:10.0pt;
+font-family:Consolas'>Prim</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> or the keywords </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>if</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
-style='font-family:Consolas'>map</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>, </span><tt><b><span style='font-family:
-Consolas'>to</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>,
-</span><tt><b><span style='font-family:Consolas'>let</span></b></tt><span
+style='font-size:10.0pt;font-family:Consolas'>then</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
-style='font-family:Consolas'>in</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>, </span><tt><b><span style='font-family:
-Consolas'>empty</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>,
-</span><tt><b><span style='font-family:Consolas'>true</span></b></tt><span
+style='font-size:10.0pt;font-family:Consolas'>else</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>map</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>to</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>let</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>in</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>empty</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>, </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>true</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, and </span><tt><b><span
-style='font-family:Consolas'>false</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'>.</span></p>
+style='font-size:10.0pt;font-family:Consolas'>false</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>.</span></p>
 
 <p><em><b><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>Numbers</span></b></em></p>
 
@@ -535,17 +567,18 @@ Consolas'>Int ::= Digit+</span></b></pre>
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The
 preceding grammar requires one symbol lookahead in a few situations. The Java
 lexer in our support code includes a method </span><tt><b><span
-style='font-family:Consolas'>Token peek()</span></b></tt><span
+style='font-size:10.0pt;font-family:Consolas'>Token peek()</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> that behaves
-exactly like the method </span><tt><b><span style='font-family:Consolas'>Token
-readToken()</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
-except for the fact that it leaves the the scanned token at the front of the input
-stream (in contrast </span><tt><b><span style='font-family:Consolas'>readToken()</span></b></tt><span
+exactly like the method </span><tt><b><span style='font-size:10.0pt;font-family:
+Consolas'>Token readToken()</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> except for the fact that it leaves the
+the scanned token at the front of the input stream (in contrast </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>readToken()</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> removes the
 scanned token from the input stream).</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The Java
-file </span><tt><b><span style='font-family:Consolas'>lexer.java</span></b></tt><span
+file </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>lexer.java</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> defines all of
 the abstract syntax classes required to represent Jam programs using the
 composite design pattern. There is one constructor for each fundamentally
@@ -564,72 +597,74 @@ abstract syntax representation for this program phrase is:</span></p>
 
 <pre style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:
 Consolas'>new BinOpApp(</span></b></pre><pre style='margin-left:45.8pt'><b><span
-style='font-size:12.0pt;font-family:Consolas'>       new Op(&quot;+&quot;),</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>       new App(new Variable(&quot;f&quot;), new AST[] { new Variable(&quot;x&quot;) }),</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>       new BinOpApp(new Op(&quot;*&quot;), new Variable(&quot;x&quot;), new IntConstant(12))</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>     )</span></b></pre>
+style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new Op(&quot;+&quot;),</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new App(new Variable(&quot;f&quot;), new AST[] { new Variable(&quot;x&quot;) }),</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new BinOpApp(new Op(&quot;*&quot;), new Variable(&quot;x&quot;), new IntConstant(12))</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'> &nbsp;&nbsp;&nbsp;&nbsp;)</span></b></pre>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>This
 construction does not tell the whole story. The lexer is guaranteed to always
 return the <i>same</i> object for a given operator. Similarly, there is only
 copy of each variable encountered by the lexer. Hence, there is only one copy
-of the </span><tt><b><span style='font-family:Consolas'>Operator</span></b></tt><span
+of the </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Operator</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> &quot;+&quot;,
-one copy of the </span><tt><b><span style='font-family:Consolas'>Operator</span></b></tt><span
+one copy of the </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Operator</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> &quot;*&quot;,
-one copy of the </span><tt><b><span style='font-family:Consolas'>Variable</span></b></tt><span
+one copy of the </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>Variable</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> &quot;x&quot;, <i>etc</i>.
-As a result, the </span><tt><b><span style='font-family:Consolas'>==</span></b></tt><span
+As a result, the </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>==</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> operator in Java
 can be used to compare operators and variables. Note that the </span><tt><b><span
-style='font-family:Consolas'>Operator</span></b></tt><span style='font-size:
-14.0pt;font-family:"Times New Roman",serif'>s &quot;+&quot; and &quot;-&quot;
-can be used either as unary or binary operators. </span></p>
+style='font-size:10.0pt;font-family:Consolas'>Operator</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>s &quot;+&quot;
+and &quot;-&quot; can be used either as unary or binary operators. </span></p>
 
 <h3>Left-associative Binary Operators</h3>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The
 preceding grammar for Jam has an annoying flaw. To make the language easy to
 parse using recursive descent (top-down) parsing, we used right recursion in
-the definition of arithmetic expressions (</span><tt><b><span style='font-family:
-Consolas'>Exp</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>).
-(Left recursion forces infinite looping in top-down parsing.) But right
-recursion yields right-associative ASTs (where computation must be performed
-right to left), while the usual mathematical convention in arithmetic
-expressions is that binary operators are left-associative (where computation
-must be performed left to right). There is a widely-used trick in writing
-grammars for top-down parsing using syntax diagrams that avoids this problem.
-The trick is replace right recursion in a simple production (only one
+the definition of arithmetic expressions (</span><tt><b><span style='font-size:
+10.0pt;font-family:Consolas'>Exp</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'>). (Left recursion forces infinite looping
+in top-down parsing.) But right recursion yields right-associative ASTs (where
+computation must be performed right to left), while the usual mathematical convention
+in arithmetic expressions is that binary operators are left-associative (where
+computation must be performed left to right). There is a widely-used trick in
+writing grammars for top-down parsing using syntax diagrams that avoids this
+problem. The trick is replace right recursion in a simple production (only one
 alternative on the right hand side) by iteration: an edge looping back to the
 input edge of the diagram. We used this trick in generating the syntax diagrams
-for </span><tt><b><span style='font-family:Consolas'>ExpList</span></b></tt><span
+for </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>ExpList</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> and </span><tt><b><span
-style='font-family:Consolas'>IdList</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> for our original grammar. Given our
-original Jam grammar, we can convert the production </span></p>
+style='font-size:10.0pt;font-family:Consolas'>IdList</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> for our original
+grammar. Given our original Jam grammar, we can convert the production </span></p>
 
 <pre style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:
-Consolas'>Exp         ::= Term { Binop Exp } | ...</span></b></pre><pre><b><span
+Consolas'>Exp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= Term { Binop Exp } | ...</span></b></pre><pre><b><span
 style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></b></pre>
 
 <p class=MsoNormal><span style='font-size:14.0pt'>to </span></p>
 
 <pre><b><span style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Exp         ::= BinaryExp | ...</span></b></pre><pre
-style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>BinaryExp   ::= Term { Binop BinaryExp }</span></b></pre><pre><b><span
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>Exp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= BinaryExp | ...</span></b></pre><pre
+style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>BinaryExp &nbsp;&nbsp;::= Term { Binop BinaryExp }</span></b></pre><pre><b><span
 style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></b></pre>
 
-<p class=MsoNormal><span style='font-size:14.0pt'>at the cost of excluding
-chains of binary operations terminating in an expression other than a term.
-Then this revised grammar can be represented using syntax diagrams that define </span><tt><b><span
-style='font-family:Consolas'>BinaryExp</span></b></tt><span style='font-size:
-14.0pt'> iteratively (just like </span><tt><b><span style='font-family:Consolas'>PropExpList</span></b></tt><span
+<p class=MsoNormal><span style='font-size:14.0pt'>at the cost of excluding chains
+of binary operations terminating in an expression other than a term. Then this
+revised grammar can be represented using syntax diagrams that define </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>BinaryExp</span></b></tt><span
+style='font-size:14.0pt'> iteratively (just like </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>PropExpList</span></b></tt><span
 style='font-size:14.0pt'> in the original grammar). </span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The
-preceding definition of </span><tt><b><span style='font-family:Consolas'>BinaryExp</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> generates the
-same set of strings as the extended rule: </span></p>
+preceding definition of </span><tt><b><span style='font-size:10.0pt;font-family:
+Consolas'>BinaryExp</span></b></tt><span style='font-size:14.0pt;font-family:
+"Times New Roman",serif'> generates the same set of strings as the extended
+rule: </span></p>
 
 <pre><b><span style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></b></pre><pre
 style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>BinaryExp ::= Term { BinOp Term }*</span></b></pre><pre><b><span
@@ -637,20 +672,22 @@ style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></b></pre>
 
 <p class=MsoNormal><span style='font-size:14.0pt'>which is ambiguous about left
 or right associativity. When iteration is used to recognize a </span><tt><b><span
-style='font-family:Consolas'>BinaryExp</span></b></tt><span style='font-size:
-14.0pt'>, the parsing process can construct a left-associative tree since the
-tree is constructed left-to-right (each new </span><tt><b><span
-style='font-family:Consolas'>Binop</span></b></tt><span style='font-size:14.0pt'>
-adds a new root to the AST).  This convention make the syntax diagram
-formulation of our Jam grammar deterministic and unambiguous.</span></p>
+style='font-size:10.0pt;font-family:Consolas'>BinaryExp</span></b></tt><span
+style='font-size:14.0pt'>, the parsing process can construct a left-associative
+tree since the tree is constructed left-to-right (each new </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>Binop</span></b></tt><span
+style='font-size:14.0pt'> adds a new root to the AST).&nbsp; This convention
+make the syntax diagram formulation of our Jam grammar deterministic and
+unambiguous.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The file <a
-href="https://github.com/RiceComp411/Assignment-1-Master-2023/blob/master/docs/JamSyntaxDiagrams.pdf">JamSyntaxDiagrams</a>
-contains iterative syntax diagrams corresponding to the original left
-associative version of the Jam language. These diagams precisely describe the
-syntax of Jam and how we want the parser to behave. Of course, this language
-eliminates a few quirky inputs from the language based on our original grammar.
-Your parser should treat these quirky inputs as erroneous. </span></p>
+href="https://github.com/RiceComp411/Assignment-1-Master-2023/blob/master/docs/JamSyntaxDiagrams.pdf"><span
+style='font-family:"Arial",sans-serif'>JamSyntaxDiagrams</span></a> contains
+iterative syntax diagrams corresponding to the original left associative
+version of the Jam language. These diagams precisely describe the syntax of Jam
+and how we want the parser to behave. Of course, this language eliminates a few
+quirky inputs from the language based on our original grammar. Your parser
+should treat these quirky inputs as erroneous. </span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>It is
 possible to write syntax diagrams that treat binary expressions iteratively and
@@ -671,27 +708,28 @@ context-free grammar is an imperfect formalization of practical parsing. </span>
 your parser to produce left-associative ASTs for arithmetic expressions. If
 your parser implements either of the &quot;revised&quot; syntax diagram
 definitions given above (which are equivalent) using </span><tt><b><span
-style='font-family:Consolas'>while</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> loops for iteration and constructs the
-corresponding abstract syntax trees in a functional style (no mutation of trees
-in theconstruction process), your parser will naturally build syntax trees that
-are left-associative.</span></p>
+style='font-size:10.0pt;font-family:Consolas'>while</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> loops for
+iteration and constructs the corresponding abstract syntax trees in a functional
+style (no mutation of trees in theconstruction process), your parser will
+naturally build syntax trees that are left-associative.</span></p>
 
 <h2>Testing and Submitting Your Program</h2>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The </span><span
 style='font-family:Consolas'>src</span><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'> folder in the provided code base includes
-some Junit4 test classes which are not comprehensive.  You need to add more
-test cases; you need to check every production in the grammar.  If a production
-involves iteration or recursion, you need to test the base cases as well as
-simple inductive constructions.</span></p>
+some Junit4 test classes which are not comprehensive.&nbsp; You need to add
+more test cases; you need to check every production in the grammar.&nbsp; If a
+production involves iteration or recursion, you need to test the base cases as
+well as simple inductive constructions.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Edit the </span><tt><b><span
-style='font-family:Consolas'>README</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> file for your repository so that it</span></p>
+style='font-size:10.0pt;font-family:Consolas'>README</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> file for your
+repository so that it</span></p>
 
-<ul type=disc>
+<ul style='margin-top:0in' type=disc>
  <li class=MsoNormal><span style='font-size:14.0pt'>outlines the organization
      of your program, </span></li>
  <li class=MsoNormal><span style='font-size:14.0pt'>specifies any compatible
@@ -702,43 +740,46 @@ font-family:"Times New Roman",serif'> file for your repository so that it</span>
 
 <p class=MsoNormal><span style='font-size:14.0pt'>Note that the README file is
 a GitHub “MarkDown” file, text augmented by a few simple formatting
-annotations.  MarkDown (MD) is much less powerful than HTML but much easier to
-use.  The webpage <b><a
-href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown-cheat-sheet</a></b>
-is a good summary for learning MarkDown and a useful reference.</span></p>
+annotations.&nbsp; MarkDown (MD) is much less powerful than HTML but much
+easier to use.&nbsp; The webpage <b><a
+href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"><span
+style='font-family:"Arial",sans-serif'>markdown-cheat-sheet</span></a></b> is a
+good summary for learning MarkDown and a useful reference.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>We do not
-recommend using separate test data files because it creates more opportunities
-for incidental errors when testing your solution.  Unless you are testing how
-well your program scales to large inputs, they are generally unnecessary.  All
-JUnit test classes submitted for grading should be compatible with a generic
-solution that conforms to the public interface provided by the stub files in
-the provided support code. In other words, we should be able to compile and run
-your unit tests against a reference solution used for grading, which has the
-same public interface as the support code. Your test classes should be defined
-in files matching the pattern </span><tt><b><span style='font-family:Consolas'>&quot;*Assign#Test.java&quot;</span></b></tt><span
+recommend using separate test data files because it creates more opportunities for
+incidental errors when testing your solution.&nbsp; Unless you are testing how
+well your program scales to large inputs, they are generally unnecessary.&nbsp;
+All JUnit test classes submitted for grading should be compatible with a
+generic solution that conforms to the public interface provided by the stub
+files in the provided support code. In other words, we should be able to
+compile and run your unit tests against a reference solution used for grading,
+which has the same public interface as the support code. Your test classes
+should be defined in files matching the pattern </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>&quot;*Assign#Test.java&quot;</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, where </span><tt><b><span
-style='font-family:Consolas'>&quot;#&quot;</span></b></tt><span
+style='font-size:10.0pt;font-family:Consolas'>&quot;#&quot;</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> is the current
-assignment number. For example, </span><tt><b><span style='font-family:Consolas'>&quot;MyAssign2Test.java&quot;</span></b></tt><span
+assignment number. For example, </span><tt><b><span style='font-size:10.0pt;
+font-family:Consolas'>&quot;MyAssign2Test.java&quot;</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> would be a valid
 name for Assignment 2 unit tests. If you want to include other tests that you
 do not want graded (e.g., to test your private interfaces), then simply use a
 different suffix than &quot;Test&quot; for the test class names (e.g., </span><tt><b><span
-style='font-family:Consolas'>&quot;Assign1Test#.java&quot;</span></b></tt><span
+style='font-size:10.0pt;font-family:Consolas'>&quot;Assign1Test#.java&quot;</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>). If you have
 additional utility classes that are required dependences of your unit test
 classes, please name those classes using the pattern </span><tt><b><span
-style='font-family:Consolas'>&quot;*Assign#TestSupport.java&quot;</span></b></tt><span
+style='font-size:10.0pt;font-family:Consolas'>&quot;*Assign#TestSupport.java&quot;</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, which signals
 that the class is required to support your unit tests, but is not a unit test
 class that should be independently launched. You may also include test support
-files with names matching the pattern </span><tt><b><span style='font-family:
-Consolas'>&quot;*AssignAllTestSupport.java&quot;</span></b></tt><span
+files with names matching the pattern </span><tt><b><span style='font-size:
+10.0pt;font-family:Consolas'>&quot;*AssignAllTestSupport.java&quot;</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, which can
 contain common test support code that can be reused across multiple assignment
-submissions without needing to rename the file.  Note that our class solutions
-to the assignments do not rely on such utility classes.</span></p>
+submissions without needing to rename the file.&nbsp; Note that our class
+solutions to the assignments do not rely on such utility classes.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Each
 method in your program should include a short comment stating precisely what it
@@ -747,8 +788,8 @@ should provide the grammar rules describing that form.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>You
 obviously do not need to “submit” your program, since you are creating it
-inside a repository on the ownership of the course staff.  We can easily access
-all student repositories.</span></p>
+inside a repository on the ownership of the course staff.&nbsp; We can easily
+access all student repositories.</span></p>
 
 <!-- ONLY WORKS IN BASH
   <p>Note if <tt>turnin411</tt> is not on your path, you will need to add <tt>~comp411/bin</tt> to your path:</p>
@@ -758,21 +799,21 @@ all student repositories.</span></p>
 <h2>Implementation Hints</h2>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The </span><tt><b><span
-style='font-family:Consolas'>toString()</span></b></tt><span style='font-size:
-14.0pt;font-family:"Times New Roman",serif'> methods for each </span><tt><b><span
-style='font-family:Consolas'>AST</span></b></tt><span style='font-size:14.0pt;
-font-family:"Times New Roman",serif'> class effectively provide an unparser for
-</span><tt><b><span style='font-family:Consolas'>AST</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'>s. You can
-directly compare test input strings with output </span><b><span
+style='font-size:10.0pt;font-family:Consolas'>toString()</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> methods for each </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>AST</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> class effectively
+provide an unparser for </span><tt><b><span style='font-size:10.0pt;font-family:
+Consolas'>AST</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>s.
+You can directly compare test input strings with output </span><b><span
 style='font-family:Consolas'>AST</span></b><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'>s by unparsing the </span><b><span
 style='font-family:Consolas'>AST</span></b><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'>s (using </span><tt><b><span
-style='font-family:Consolas'>toString()</span></b></tt><span style='font-size:
-14.0pt;font-family:"Times New Roman",serif'>). The two strings should match up
-to differences in whitespace, new lines, and parentheses using for grouping
-which may force you to slightly reformat your input strings.</span></p>
+style='font-size:10.0pt;font-family:Consolas'>toString()</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'>). The two strings
+should match up to differences in whitespace, new lines, and parentheses using
+for grouping which may force you to slightly reformat your input strings.</span></p>
 
 </div>
 
