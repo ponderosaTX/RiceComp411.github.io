@@ -151,17 +151,17 @@ When you accept the assignment, GitHub Classroom creates a repository for you
 that in initialized to contain all of the support files for the project
 including this project description.&nbsp; DrJava only runs using Java 8.&nbsp;
 We recommend using the Oracle Java 8 SE (build 8u331 or later) with DrJava; on
-Windows 10/12, DrJava appears to be slightly more reliable than other
-distributions of the Java 8 JDK such as OpenJDK 8.&nbsp; DrJava has been
-developed using builds the Oracle Java 8 SE, most recently build 8u331 and the
-various versions of the Java 8 JDK differ in minor respects.&nbsp; If you use
-IntelliJ as your IDE, you can choose any compatible JDK.&nbsp; Beware of the
-fact that the assignments you submit must run from the command line and <i>cannot</i>
-place of the methods in the specified API in named packages.&nbsp; If your
-program modifies the specified API (as stipulated in the assignment description
-below and codified in the sample test suite Assign1Test.java) by placing the
-API methods in named packages, your program does not implement the specified
-API and all grading tests will fail.&nbsp; You can confirm that your program
+Windows 10/12, DrJava appears to be slightly more reliable than other distributions
+of the Java 8 JDK such as OpenJDK 8.&nbsp; DrJava has been developed using
+builds the Oracle Java 8 SE, most recently build 8u331 and the various versions
+of the Java 8 JDK differ in minor respects.&nbsp; If you use IntelliJ as your
+IDE, you can choose any compatible JDK.&nbsp; Beware of the fact that the
+assignments you submit must run from the command line and <i>cannot</i> place
+of the methods in the specified API in named packages.&nbsp; If your program
+modifies the specified API (as stipulated in the assignment description below
+and codified in the sample test suite Assign1Test.java) by placing the API
+methods in named packages, your program does not implement the specified API
+and all grading tests will fail.&nbsp; You can confirm that your program
 supports the specified API by running the sample test suite in
 Assign1Test.java.</span></p>
 
@@ -276,9 +276,9 @@ font-family:Consolas'>AST</span></tt><span style='font-size:14.0pt;font-family:
 <h2>The API That Your Program Must Support</h2>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>All
-classes visible in the API must be in the default (top-level) package. Using named
-packages will break our grading scripts, causing a catastrophic loss of points
-on the assignment.&nbsp; If your program passes the tests in the file
+classes visible in the API must be in the default (top-level) package. Using
+named packages will break our grading scripts, causing a catastrophic loss of
+points on the assignment.&nbsp; If your program passes the tests in the file
 Assign1Test.java in the empty package, it conforms to this standard.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>Your
@@ -300,12 +300,12 @@ that reside in files.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>The </span><tt><b><span
 style='font-size:10.0pt;font-family:Consolas'>Parser</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> class should
-contain a public method </span><tt><b><span style='font-size:10.0pt;font-family:
-Consolas'>AST parse()</span></b></tt><span style='font-size:14.0pt;font-family:
-"Times New Roman",serif'> that returns the abstract syntax tree for the Jam
-expression in the input stream. Our grading program will print the output using
-the method </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>System.out.println</span></b></tt><span
+style='font-size:14.0pt;font-family:"Times New Roman",serif'> class should contain
+a public method </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>AST
+parse()</span></b></tt><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
+that returns the abstract syntax tree for the Jam expression in the input
+stream. Our grading program will print the output using the method </span><tt><b><span
+style='font-size:10.0pt;font-family:Consolas'>System.out.println</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'>, which invokes
 the </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>toString</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> method on its
@@ -336,8 +336,8 @@ your parser should recognize as legal Jam programs.</span></p>
 
 <p><strong><span style='font-size:14.0pt;font-family:"Arial",sans-serif'>The
 Meta-Language</span></strong><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>
-The parser's input language is described using Extended Backus-Naur Form (EBNF).
-When reading the notation, keep the following in mind:</span></p>
+The parser's input language is described using Extended Backus-Naur Form
+(EBNF). When reading the notation, keep the following in mind:</span></p>
 
 <ul style='margin-top:0in' type=disc>
  <li class=MsoNormal><span style='font-size:14.0pt'>A symbol in the
@@ -628,18 +628,19 @@ the definition of arithmetic expressions (</span><tt><b><span style='font-size:
 10.0pt;font-family:Consolas'>Exp</span></b></tt><span style='font-size:14.0pt;
 font-family:"Times New Roman",serif'>). (Left recursion forces infinite looping
 in top-down parsing.) But right recursion yields right-associative ASTs (where
-computation must be performed right to left), while the usual mathematical convention
-in arithmetic expressions is that binary operators are left-associative (where
-computation must be performed left to right). There is a widely-used trick in
-writing grammars for top-down parsing using syntax diagrams that avoids this
-problem. The trick is replace right recursion in a simple production (only one
-alternative on the right hand side) by iteration: an edge looping back to the
-input edge of the diagram. We used this trick in generating the syntax diagrams
-for </span><tt><b><span style='font-size:10.0pt;font-family:Consolas'>ExpList</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> and </span><tt><b><span
-style='font-size:10.0pt;font-family:Consolas'>IdList</span></b></tt><span
-style='font-size:14.0pt;font-family:"Times New Roman",serif'> for our original
-grammar. Given our original Jam grammar, we can convert the production </span></p>
+computation must be performed right to left), while the usual mathematical
+convention in arithmetic expressions is that binary operators are
+left-associative (where computation must be performed left to right). There is
+a widely-used trick in writing grammars for top-down parsing using syntax
+diagrams that avoids this problem. The trick is replace right recursion in a
+simple production (only one alternative on the right hand side) by iteration:
+an edge looping back to the input edge of the diagram. We used this trick in
+generating the syntax diagrams for </span><tt><b><span style='font-size:10.0pt;
+font-family:Consolas'>ExpList</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> and </span><tt><b><span style='font-size:
+10.0pt;font-family:Consolas'>IdList</span></b></tt><span style='font-size:14.0pt;
+font-family:"Times New Roman",serif'> for our original grammar. Given our
+original Jam grammar, we can convert the production </span></p>
 
 <pre style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:
 Consolas'>Exp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::= Term { Binop Exp } | ...</span></b></pre><pre><b><span
@@ -652,9 +653,9 @@ style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas
 style='margin-left:45.8pt'><b><span style='font-size:12.0pt;font-family:Consolas'>BinaryExp &nbsp;&nbsp;::= Term { Binop BinaryExp }</span></b></pre><pre><b><span
 style='font-size:12.0pt;font-family:Consolas'>&nbsp;</span></b></pre>
 
-<p class=MsoNormal><span style='font-size:14.0pt'>at the cost of excluding chains
-of binary operations terminating in an expression other than a term. Then this
-revised grammar can be represented using syntax diagrams that define </span><tt><b><span
+<p class=MsoNormal><span style='font-size:14.0pt'>at the cost of excluding
+chains of binary operations terminating in an expression other than a term.
+Then this revised grammar can be represented using syntax diagrams that define </span><tt><b><span
 style='font-size:10.0pt;font-family:Consolas'>BinaryExp</span></b></tt><span
 style='font-size:14.0pt'> iteratively (just like </span><tt><b><span
 style='font-size:10.0pt;font-family:Consolas'>PropExpList</span></b></tt><span
@@ -710,9 +711,9 @@ your parser implements either of the &quot;revised&quot; syntax diagram
 definitions given above (which are equivalent) using </span><tt><b><span
 style='font-size:10.0pt;font-family:Consolas'>while</span></b></tt><span
 style='font-size:14.0pt;font-family:"Times New Roman",serif'> loops for
-iteration and constructs the corresponding abstract syntax trees in a functional
-style (no mutation of trees in theconstruction process), your parser will
-naturally build syntax trees that are left-associative.</span></p>
+iteration and constructs the corresponding abstract syntax trees in a
+functional style (no mutation of trees in theconstruction process), your parser
+will naturally build syntax trees that are left-associative.</span></p>
 
 <h2>Testing and Submitting Your Program</h2>
 
@@ -747,9 +748,9 @@ style='font-family:"Arial",sans-serif'>markdown-cheat-sheet</span></a></b> is a
 good summary for learning MarkDown and a useful reference.</span></p>
 
 <p><span style='font-size:14.0pt;font-family:"Times New Roman",serif'>We do not
-recommend using separate test data files because it creates more opportunities for
-incidental errors when testing your solution.&nbsp; Unless you are testing how
-well your program scales to large inputs, they are generally unnecessary.&nbsp;
+recommend using separate test data files because it creates more opportunities
+for incidental errors when testing your solution.&nbsp; Unless you are testing
+how well your program scales to large inputs, they are generally unnecessary.&nbsp;
 All JUnit test classes submitted for grading should be compatible with a
 generic solution that conforms to the public interface provided by the stub
 files in the provided support code. In other words, we should be able to
